@@ -7,25 +7,14 @@
 
 import React from "react"
 import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
+import "./layout.module.scss"
 
-import Header from "./header"
-import myStyle from "./layout.module.scss"
+import Header from "./header/header"
 
 const Layout = ({ children }) => {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `)
-
   return (
     <>
-      <Header siteTitle={data.site.siteMetadata.title} />
+      <Header />
       <div
         style={{
           margin: `0 auto`,
@@ -34,7 +23,7 @@ const Layout = ({ children }) => {
           paddingTop: 0,
         }}
       >
-        <main className={myStyle.test}>{children}</main>
+        <main>{children}</main>
         <footer>
           © {new Date().getFullYear()}, Built with
           {` `}
