@@ -41,6 +41,16 @@ body {
   scroll-behavior: smooth;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
+  --bg: #fff;
+
+  &.dark {
+    --bg: #202026;
+  }
+}
+
+body {
+  background-color: var(--bg);
+  transition: background 0.2s ease-out;
 }
 
 /* Remove list styles on ul, ol elements with a class attribute */

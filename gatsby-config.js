@@ -5,6 +5,7 @@ module.exports = {
     author: `@gatsbyjs`,
   },
   plugins: [
+    `gatsby-plugin-dark-mode`,
     `gatsby-plugin-sass`,
     `gatsby-plugin-react-helmet`,
     {

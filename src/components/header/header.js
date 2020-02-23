@@ -1,6 +1,7 @@
 import React from "react"
 import style from "./header.module.scss"
 import logo from "../../images/logo.svg"
+import { ThemeToggler } from 'gatsby-plugin-dark-mode'
 
 class Header extends React.Component {
   constructor(props) {
@@ -33,6 +34,17 @@ class Header extends React.Component {
               <li><a href="/contact">Contact</a></li>
             </ul>
           </nav>
+          <ThemeToggler>
+            {({ theme, toggleTheme }) => (
+              <label>
+                <input
+                  type="checkbox"
+                  onChange={e => toggleTheme(e.target.checked ? 'dark' : 'light')}
+                  checked={theme === 'dark'}
+                />{' '}
+              </label>
+            )}
+          </ThemeToggler>
         </div>
       </header>
     );

@@ -126,7 +126,7 @@
 
 @media only screen and (min-width: 768px) {
   .menu-container {
-    background: #FFF;
+    background: var(--bg);
     border-radius: 0;
     position: static;
     right: 0;
