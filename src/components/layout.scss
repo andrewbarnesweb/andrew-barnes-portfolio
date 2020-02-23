@@ -39,6 +39,7 @@ dd {
 body {
   --bg: #fff;
   --primary: #7e1660;
+  --primary-rgb: 126, 22, 96;
   --header: #333;
   --text: #777777;
   --accent-one: #f0f0f0;
@@ -53,6 +54,7 @@ body {
   &.dark {
     --bg: #202026;
     --primary: #f130b7;
+    --primary-rgb: 241, 48, 183;
     --header: #ededed;
     --text: #9e9e9e;
     --accent-one: #111114;
