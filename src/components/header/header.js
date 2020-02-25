@@ -19,7 +19,7 @@ class Header extends React.Component {
   render() {
     return (
       <header>
-        <div className={this.state.condition ? `${style.menuContainer} ${style.menuContainerActive}` : style.menuContainer}>
+        <div className={this.state.condition ? style.menuContainerActive : style.menuContainer}>
           <svg className={style.logo} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 54 54" role="img" aria-labelledby="logo-title">
             <title id="logo-title">Logo</title>
             <g data-name="Oval 1 + AB" transform="translate(-0.35 -0.35)">
@@ -31,10 +31,10 @@ class Header extends React.Component {
 
           <div className={style.name}>Andrew <strong>Barnes</strong></div>
           <button onClick={this.handleClick} className={style.menuButton}>
-            <span className={this.state.condition ? `${style.menuIcon} ${style.menuIconActive}` : style.menuIcon}></span>
+            <span className={this.state.condition ? style.menuIconActive : style.menuIcon}></span>
           </button>
           <nav>
-            <ul className={this.state.condition ? `${style.nav} ${style.navActive}` : style.nav}>
+            <ul className={this.state.condition ? style.navActive : style.nav}>
               <li><a href="#about-me">About me</a></li>
               <li><a href="#what-i-do">What I do</a></li>
               <li><a href="#blog">Blog</a></li>
