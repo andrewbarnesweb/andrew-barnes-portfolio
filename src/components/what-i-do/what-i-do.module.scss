@@ -1,0 +1,120 @@
+@import '../function.scss';
+
+.container {
+  padding: calculateRem(30);
+  opacity: 0;
+  visibility: hidden;
+  transform: translate(0, 100px);
+}
+
+.container-visible {
+  composes: container;
+  opacity: 1;
+  visibility: visible;
+  transform: translate(0, 0);
+  transition: transform 400ms ease-out 100ms, opacity 400ms ease-out 100ms;
+}
+
+.skills {
+  div {
+    margin-bottom: calculateRem(28);
+  }
+}
+
+.title {
+  text-transform: uppercase;
+  font-size: calculateRem(18);
+  font-weight: bold;
+  color: var(--header);
+  margin-bottom: calculateRem(30);
+}
+
+.text {
+  p {
+    font-size: calculateRem(14);
+    line-height: calculateRem(23);
+    color: var(--text);
+
+    &:not(:last-child) {
+      margin-bottom: calculateRem(36);
+    }
+  }
+}
+
+.skill-title {
+  font-size: calculateRem(16);
+  font-weight: bold;
+  margin-top: calculateRem(35);
+  margin-bottom: calculateRem(10);
+  color: var(--header);
+}
+
+.bar {
+  background-color: #d8d8d8;
+  height: calculateRem(10);
+  border-radius: calculateRem(2);
+  overflow: hidden;
+  position: relative;
+  margin-bottom: calculateRem(35);
+
+  div {
+    z-index: 1;
+    display: block;
+    height: 100%;
+    width: 0;
+    background-color: var(--primary);
+    transition: width .6s ease-out .1s;
+    transition-delay: .5s;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .container {
+    width: calculateRem(720);
+    margin: 0 auto;
+  }
+
+  .info {
+    display: flex;
+
+    .text {
+      order: 2;
+    }
+
+    .charts {
+      order: 1;
+      flex: 1 0 60%;
+      padding-right: calculateRem(40);
+    }
+
+    .skill-title:first-of-type {
+      margin-top: 0;
+    }
+  }
+
+  .skills {
+    display: flex;
+
+    // must be a better way to add margin
+    .skills-container {
+      margin-left: calculateRem(12);
+      margin-right: calculateRem(12);
+    }
+
+    .skills-container:first-of-type {
+      margin-left: 0;
+    }
+
+    .skills-container:last-of-type {
+      margin-right: 0;
+    }
+  }
+}
+
+
+@media only screen and (min-width: 992px) {
+  .container {
+    min-width: 992px;
+    max-width: 1024;
+  }
+}
