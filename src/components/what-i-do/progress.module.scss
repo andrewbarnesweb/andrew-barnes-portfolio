@@ -1,0 +1,20 @@
+@import '../function.scss';
+
+.progress {
+  background-color: var(--bar-background);
+  height: calculateRem(10);
+  border-radius: calculateRem(2);
+  overflow: hidden;
+  position: relative;
+  margin-bottom: calculateRem(35);
+
+  div {
+    z-index: 1;
+    display: block;
+    height: 100%;
+    width: 0;
+    background-color: var(--primary);
+    transition: width .6s ease-out .1s;
+    transition-delay: .5s;
+  }
+}

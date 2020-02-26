@@ -2,3 +2,41 @@
   $remSize: $size / 16;
   @return #{$remSize}rem;
 }
+
+@mixin animate-setup($position) {
+  opacity: 1;
+  visibility: visible;
+  transform: translate(0, #{$position}px);
+  transition: transform 400ms ease-out 100ms, opacity 400ms ease-out 100ms;
+}
+
+@mixin animate-show {
+  opacity: 1;
+  visibility: visible;
+  transform: translate(0, 0);
+  transition: transform 400ms ease-out 100ms, opacity 400ms ease-out 100ms;
+}
+
+@mixin text {
+  font-size: calculateRem(14);
+  line-height: calculateRem(23);
+  color: var(--text);
+}
+
+@mixin paragraphs {
+  p {
+    @include text;
+
+    &:not(:last-child) {
+      margin-bottom: calculateRem(36);
+    }
+  }
+}
+
+@mixin title {
+  text-transform: uppercase;
+  font-size: calculateRem(18);
+  font-weight: bold;
+  color: var(--header);
+  margin-bottom: calculateRem(30);
+}

@@ -18,14 +18,5 @@
     margin-right: calculateRem(12);
   }
 
-  // this needs to be common code
-  p {
-    font-size: calculateRem(14);
-    line-height: calculateRem(23);
-    color: var(--text);
-
-    &:not(:last-child) {
-      margin-bottom: calculateRem(36);
-    }
-  }
+  @include paragraphs;
 }

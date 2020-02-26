@@ -1,6 +1,7 @@
 import React from "react"
 import style from "./what-i-do.module.scss"
 import SkillCard from "./skill-card"
+import Progress from "./progress"
 import VisibilitySensor from 'react-visibility-sensor';
 
 class WhatIDo extends React.Component {
@@ -31,7 +32,7 @@ class WhatIDo extends React.Component {
   render() {
     return (
       <VisibilitySensor partialVisibility={true} onChange={this.onBlockChange.bind(this)}>
-        <div className={this.state.blockVisible ? style.containerVisible : style.container} id="what-i-do">
+        <div className={this.state.blockVisible ? style.containerVisible : style.container}>
           <h2 className={style.title}>What I do</h2>
           <div className={style.skills}>
             <div className={style.skillsContainer}>
@@ -57,30 +58,20 @@ class WhatIDo extends React.Component {
             </div>
             <div className={style.charts}>
               <h3 className={style.skillTitle}>Skill one</h3>
-                <VisibilitySensor partialVisibility={true} onChange={this.onChange.bind(this)}>
-                <div className={style.bar}>
-                  <div style={{ width: this.state.visible ? "80%" : "0%" }}></div>
-                </div>
-                </VisibilitySensor>
+              <VisibilitySensor partialVisibility={true} onChange={this.onChange.bind(this)}>
+                <Progress initial="0%" actual="80%" start={this.state.visible} />
+              </VisibilitySensor>
               <h3 className={style.skillTitle}>Skill two</h3>
-              <div className={style.bar}>
-                <div style={{ width: this.state.visible ? "90%" : "0%" }}></div>
-              </div>
+              <Progress initial="0%" actual="90%" start={this.state.visible} />
 
               <h3 className={style.skillTitle}>Skill three</h3>
-              <div className={style.bar}>
-                <div style={{ width: this.state.visible ? "70%" : "0%" }}></div>
-              </div>
+              <Progress initial="0%" actual="75%" start={this.state.visible} />
 
               <h3 className={style.skillTitle}>Skill four</h3>
-              <div className={style.bar}>
-                <div style={{ width: this.state.visible ? "85%" : "0%" }}></div>
-              </div>
+              <Progress initial="0%" actual="85%" start={this.state.visible} />
 
               <h3 className={style.skillTitle}>Social skills</h3>
-              <div className={style.bar}>
-                <div style={{ width: this.state.visible ? "95%" : "0%" }}></div>
-              </div>
+              <Progress initial="0%" actual="95%" start={this.state.visible} />
             </div>
           </div>
         </div>

@@ -125,17 +125,12 @@
 
 @media only screen and (min-width: 768px) {
   .container {
-    opacity: 0;
-    visibility: hidden;
-    transform: translate(0, -50px);
+    @include animate-setup(-50);
   }
 
   .container-visible {
     composes: container;
-    opacity: 1;
-    visibility: visible;
-    transform: translate(0, 0);
-    transition: transform 400ms ease-out 100ms, opacity 400ms ease-out 100ms;
+    @include animate-show;
   }
 
   .menu-container {
