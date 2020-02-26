@@ -7,7 +7,8 @@ class Header extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      condition: false
+      condition: false,
+      visible: false,
     }
     this.handleClick = this.handleClick.bind(this)
   }
@@ -16,9 +17,16 @@ class Header extends React.Component {
       condition: !this.state.condition
     })
   }
+
+  componentDidMount() {
+    this.setState({
+      visible: true
+    })
+  }
+
   render() {
     return (
-      <header>
+      <header className={this.state.visible ? style.containerVisible : style.container}>
         <div className={this.state.condition ? style.menuContainerActive : style.menuContainer}>
           <svg className={style.logo} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 54 54" role="img" aria-labelledby="logo-title">
             <title id="logo-title">Logo</title>

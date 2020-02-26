@@ -3,6 +3,17 @@
 .container {
   margin-top: calculateRem(36);
   margin-bottom: calculateRem(62);
+  opacity: 0;
+  visibility: hidden;
+  transform: translate(0, 100px);
+}
+
+.container-visible {
+  composes: container;
+  opacity: 1;
+  visibility: visible;
+  transform: translate(0, 0);
+  transition: transform 400ms ease-out 100ms, opacity 400ms ease-out 100ms;
 }
 
 .image {
