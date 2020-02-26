@@ -2,7 +2,17 @@
 
 .container {
   background: linear-gradient(to bottom right, var(--accent-one) 0%, var(--accent-one) 50%, var(--accent-two) 50%, var(--accent-two) 100%);
-  transition: .2s ease-in-out;
+  opacity: 0;
+  visibility: hidden;
+  transform: translate(0, 100px);
+}
+
+.container-visible {
+  composes: container;
+  opacity: 1;
+  visibility: visible;
+  transform: translate(0, 0);
+  transition: transform 400ms ease-out 100ms, opacity 400ms ease-out 100ms;
 }
 
 .content {
