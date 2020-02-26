@@ -2,6 +2,7 @@ html {
   font-family: "Open Sans";
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
+  scroll-behavior: smooth;
 }
 
 /* Box sizing rules */
@@ -46,7 +47,6 @@ body {
   --accent-two: #f0f0f0;
   --button: var(--primary);
   min-height: 100vh;
-  scroll-behavior: smooth;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
 
@@ -104,6 +104,7 @@ select {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
+    transition-delay: 0.01ms !important;;
     scroll-behavior: auto !important;
   }
 }
