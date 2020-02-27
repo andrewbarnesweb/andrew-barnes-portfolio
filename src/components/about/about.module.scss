@@ -1,7 +1,7 @@
 @import '../function.scss';
 
 .container {
-  background: linear-gradient(to bottom right, var(--accent-one) 0%, var(--accent-one) 50%, var(--accent-two) 50%, var(--accent-two) 100%);
+  @include triangle-background;
   @include animate-setup(100);
 }
 
@@ -85,7 +85,7 @@
   .content {
     display: flex;
     min-width: 992px;
-    max-width: 1024;
+    max-width: 1024px;
   }
 
   .copy {

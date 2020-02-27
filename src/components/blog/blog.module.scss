@@ -1,0 +1,71 @@
+@import '../function.scss';
+
+.container {
+  @include triangle-background;
+  @include animate-setup(100);
+}
+
+.container-visible {
+  composes: container;
+  @include animate-show;
+}
+
+.title {
+  @include title;
+}
+
+.content {
+  padding: calculateRem(30);
+}
+
+.posts {
+  div {
+    margin-bottom: calculateRem(20);
+  }
+}
+
+.link {
+  background-color: var(--button);
+  color: #fff;
+  font-size: calculateRem(15);
+  font-weight: bold;
+  text-decoration: none;
+  padding: calculateRem(12) calculateRem(24);
+  display: inline-block;
+  margin-top: calculateRem(20);
+}
+
+@media only screen and (min-width: 768px) {
+  .container {
+    display: flex;
+    justify-content: center;
+  }
+
+  .content {
+    width: calculateRem(720);
+  }
+
+  .posts {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: calculateRem(16);
+    column-gap: calculateRem(16);
+    grid-row-gap: calculateRem(16);
+    row-gap: calculateRem(16);
+
+    div {
+      margin-bottom: 0;
+    }
+  }
+
+  .link {
+    margin-top: calculateRem(40);
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .content {
+    min-width: 992px;
+    max-width: 1024px;
+  }
+}
