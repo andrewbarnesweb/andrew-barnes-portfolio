@@ -2,7 +2,12 @@
 
 .container {
   background: linear-gradient(to bottom right, var(--accent-one) 0%, var(--accent-one) 50%, var(--accent-two) 50%, var(--accent-two) 100%);
-  transition: .2s ease-in-out;
+  @include animate-setup(100);
+}
+
+.container-visible {
+  composes: container;
+  @include animate-show;
 }
 
 .content {
@@ -15,23 +20,11 @@
 }
 
 .title {
-  text-transform: uppercase;
-  font-size: calculateRem(18);
-  font-weight: bold;
-  color: var(--header);
-  margin-bottom: calculateRem(30);
+  @include title;
 }
 
 .text {
-  p {
-    font-size: calculateRem(14);
-    line-height: calculateRem(23);
-    color: var(--text);
-
-    &:not(:last-child) {
-      margin-bottom: calculateRem(36);
-    }
-  }
+  @include paragraphs;
 }
 
 .list {

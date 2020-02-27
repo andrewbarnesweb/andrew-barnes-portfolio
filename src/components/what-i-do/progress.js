@@ -1,31 +1,14 @@
 import React from "react"
-import style from "./what-i-do.module.scss"
-import VisibilitySensor from 'react-visibility-sensor';
+import style from "./progress.module.scss"
 
-class WhatIDo extends React.Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      width: "0"
-    }
-  }
-
-  onChange(isVisible) {
-    console.log('Element is now %s', isVisible ? 'visible' : 'hidden');
-    if (isVisible) {
-      this.setState({
-        width: "0"
-      });
-    }
-  }
-
+class Progress extends React.Component {
   render() {
     return (
-      <div className={style.bar}>
-        <div style={{ width: this.state.width }}></div>
+      <div className={style.progress}>
+        <div style={{ width: this.props.start ? this.props.actual : this.props.initial }}></div>
       </div>
     );
   }
 }
 
-export default WhatIDo
+export default Progress

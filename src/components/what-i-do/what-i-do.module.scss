@@ -2,17 +2,12 @@
 
 .container {
   padding: calculateRem(30);
-  opacity: 0;
-  visibility: hidden;
-  transform: translate(0, 100px);
+  @include animate-setup(100);
 }
 
 .container-visible {
   composes: container;
-  opacity: 1;
-  visibility: visible;
-  transform: translate(0, 0);
-  transition: transform 400ms ease-out 100ms, opacity 400ms ease-out 100ms;
+  @include animate-show;
 }
 
 .skills {
@@ -22,23 +17,11 @@
 }
 
 .title {
-  text-transform: uppercase;
-  font-size: calculateRem(18);
-  font-weight: bold;
-  color: var(--header);
-  margin-bottom: calculateRem(30);
+  @include title;
 }
 
 .text {
-  p {
-    font-size: calculateRem(14);
-    line-height: calculateRem(23);
-    color: var(--text);
-
-    &:not(:last-child) {
-      margin-bottom: calculateRem(36);
-    }
-  }
+  @include paragraphs;
 }
 
 .skill-title {
@@ -47,25 +30,6 @@
   margin-top: calculateRem(35);
   margin-bottom: calculateRem(10);
   color: var(--header);
-}
-
-.bar {
-  background-color: #d8d8d8;
-  height: calculateRem(10);
-  border-radius: calculateRem(2);
-  overflow: hidden;
-  position: relative;
-  margin-bottom: calculateRem(35);
-
-  div {
-    z-index: 1;
-    display: block;
-    height: 100%;
-    width: 0;
-    background-color: var(--primary);
-    transition: width .6s ease-out .1s;
-    transition-delay: .5s;
-  }
 }
 
 @media only screen and (min-width: 768px) {
@@ -95,7 +59,7 @@
   .skills {
     display: flex;
 
-    // must be a better way to add margin
+    //TODO: must be a better way to add margin. Grid?
     .skills-container {
       margin-left: calculateRem(12);
       margin-right: calculateRem(12);

@@ -1,12 +1,23 @@
 import React from "react"
 import style from "./intro.module.scss"
 import avatar from "../../images/avatar.jpg"
-
-
 class Intro extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      visible: false,
+    }
+  }
+
+  componentDidMount() {
+    this.setState({
+      visible: true
+    })
+  }
+
   render() {
     return (
-      <div className={style.container}>
+      <div className={this.state.visible ? style.containerVisible : style.container}>
         <img className={style.image} src={avatar} alt="Andrew Barnes" />
         <div className={style.content}>
           <div className={style.text}>

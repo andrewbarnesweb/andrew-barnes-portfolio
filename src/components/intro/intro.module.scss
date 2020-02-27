@@ -3,6 +3,12 @@
 .container {
   margin-top: calculateRem(36);
   margin-bottom: calculateRem(62);
+  @include animate-setup(100);
+}
+
+.container-visible {
+  composes: container;
+  @include animate-show;
 }
 
 .image {
@@ -33,9 +39,7 @@
 }
 
 .intro {
-  color: var(--text);
-  font-size: calculateRem(14);
-  line-height: calculateRem(23);
+  @include text;
   margin: calculateRem(14) auto;
   padding-left: calculateRem(30);
   padding-right: calculateRem(30);
