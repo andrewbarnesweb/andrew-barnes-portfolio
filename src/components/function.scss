@@ -40,3 +40,7 @@
   color: var(--header);
   margin-bottom: calculateRem(30);
 }
+
+@mixin triangle-background {
+  background: linear-gradient(to bottom right, var(--accent-one) 0%, var(--accent-one) 50%, var(--accent-two) 50%, var(--accent-two) 100%);
+}

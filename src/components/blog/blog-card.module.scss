@@ -1,0 +1,31 @@
+@import '../function.scss';
+
+.container {
+  text-decoration: none;
+}
+
+.post {
+  background-color: var(--bg);
+  padding: calculateRem(20);
+  text-align: center;
+
+  .link {
+  font-size: calculateRem(20);
+  font-weight: normal;
+  color: var(--primary);
+  }
+
+  .separator {
+    display: block;
+    height: calculateRem(4);
+    background-color: var(--accent-one);
+    margin: calculateRem(12) calculateRem(40);
+  }
+
+  .time {
+    color: var(--text);
+    font-size: calculateRem(13);
+    margin-bottom: calculateRem(26);
+  }
+}
+

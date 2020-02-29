@@ -38,14 +38,14 @@ class Header extends React.Component {
           </svg>
 
           <div className={style.name}>Andrew <strong>Barnes</strong></div>
-          <button onClick={this.handleClick} className={style.menuButton}>
+          <button onClick={this.handleClick} className={style.menuButton} aria-label="Toggle navigation">
             <span className={this.state.condition ? style.menuIconActive : style.menuIcon}></span>
           </button>
           <nav>
             <ul className={this.state.condition ? style.navActive : style.nav}>
               <li><a onClick={this.handleClick} href="#about-me">About me</a></li>
               <li><a onClick={this.handleClick} href="#what-i-do">What I do</a></li>
-              <li><a href="#blog">Blog</a></li>
+              <li><a onClick={this.handleClick} href="#blog">Blog</a></li>
               <li><a href="#my-work">My work</a></li>
               <li><a href="#contact">Contact</a></li>
             </ul>
