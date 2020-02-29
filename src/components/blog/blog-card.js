@@ -5,23 +5,23 @@ class BlogCard extends React.Component {
 
   render() {
     return (
-      <div className={style.post}>
-        <h3><a className={style.link} href={this.props.link}>{this.props.title}</a></h3>
-        <span className={style.separator}></span>
-        <div className={style.time}>
-          <strong>Posted: </strong>
-          <time datetime={this.props.date}>
-            {this.props.date.toLocaleDateString('en-GB', {
-              year: "numeric",
-              month: "short",
-              day: "2-digit"
-            })}
-          </time>
+      <a className={style.container} href={this.props.link} title={this.props.title}>
+        <div className={style.post}>
+          <h3 className={style.link}>{this.props.title}</h3>
+          <span className={style.separator}></span>
+          <div className={style.time}>
+            <strong>Posted: </strong>
+            <time datetime={this.props.date}>
+              {this.props.date.toLocaleDateString('en-GB', {
+                year: "numeric",
+                month: "short",
+                day: "2-digit"
+              })}
+            </time>
+          </div>
+            <img src={this.props.image} alt="" />
         </div>
-        <a href={this.props.link} title={this.props.title}>
-          <img src={this.props.image} alt="" />
-        </a>
-      </div>
+      </a>
     );
   }
 }

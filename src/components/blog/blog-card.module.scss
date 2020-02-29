@@ -1,5 +1,9 @@
 @import '../function.scss';
 
+.container {
+  text-decoration: none;
+}
+
 .post {
   background-color: var(--bg);
   padding: calculateRem(20);
@@ -9,7 +13,6 @@
   font-size: calculateRem(20);
   font-weight: normal;
   color: var(--primary);
-  text-decoration: none;
   }
 
   .separator {

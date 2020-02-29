@@ -19,7 +19,7 @@ const Toggle = () => {
                 checked={theme === 'dark'}
                 aria-label="Activate dark mode"
               />{' '}
-              <label htmlFor="theme-checkbox"></label>
+              <label htmlFor="theme-checkbox">Show dark mode</label>
             </div>
             <svg className={style.toggleIconDark} xmlns="http://www.w3.org/2000/svg" width="16.354" height="18.996" viewBox="0 0 16.354 17.3">
               <path d="M8,16A8,8,0,0,1,8,0a9.7,9.7,0,0,1,3.58.786C9.615,1.122,5.333,2.963,5.333,8a7.2,7.2,0,0,0,6.247,7.214A7.483,7.483,0,0,1,8,16Z" transform="translate(0 3.961) rotate(-20)" />

@@ -38,7 +38,7 @@ class Header extends React.Component {
           </svg>
 
           <div className={style.name}>Andrew <strong>Barnes</strong></div>
-          <button onClick={this.handleClick} className={style.menuButton}>
+          <button onClick={this.handleClick} className={style.menuButton} aria-label="Toggle navigation">
             <span className={this.state.condition ? style.menuIconActive : style.menuIcon}></span>
           </button>
           <nav>
