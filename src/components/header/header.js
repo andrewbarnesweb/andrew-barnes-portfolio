@@ -46,8 +46,8 @@ class Header extends React.Component {
               <li><a onClick={this.handleClick} href="#about-me">About me</a></li>
               <li><a onClick={this.handleClick} href="#what-i-do">What I do</a></li>
               <li><a onClick={this.handleClick} href="#blog">Blog</a></li>
-              <li><a href="#my-work">My work</a></li>
-              <li><a href="#contact">Contact</a></li>
+              <li><a onClick={this.handleClick} href="#my-work">My work</a></li>
+              <li><a onClick={this.handleClick} href="#contact">Contact</a></li>
             </ul>
           </nav>
           <Toggle />

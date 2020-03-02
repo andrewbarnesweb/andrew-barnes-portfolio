@@ -1,19 +1,5 @@
 @import '../function.scss';
 
-.container {
-  padding: calculateRem(30);
-  @include animate-setup(100);
-}
-
-.container-visible {
-  composes: container;
-  @include animate-show;
-}
-
-.title {
-  @include title;
-}
-
 .work {
   margin-bottom: calculateRem(40);
 }
@@ -45,18 +31,27 @@
     font-weight: 600;
     color: var(--header);
     margin-bottom: calculateRem(36);
-    display: inline-block;
+    display: flex;
+    align-items: center;
+  }
+
+  svg {
+    fill: var(--primary);
+    margin-right: calculateRem(10);
+  }
+
+  .skills {
+    font-size: calculateRem(14);
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-top: calculateRem(36);
+    color: var(--header);
   }
 
   @include paragraphs;
 }
 
 @media only screen and (min-width: 768px) {
-  .container {
-    width: calculateRem(720);
-    margin: 0 auto;
-  }
-
   .work {
     display: flex;
     margin-bottom: calculateRem(60);
@@ -78,6 +73,14 @@
     top: calculateRem(28);
     margin-left: calculateRem(68);
     margin-bottom: 0;
+
+    h3 {
+      font-size: calculateRem(28);
+    }
+
+    h4 {
+      font-size: calculateRem(20);
+    }
   }
 
   .details-alternate {
@@ -85,12 +88,5 @@
     order: 1;
     margin-left: 0;
     margin-right: calculateRem(68);
-  }
-}
-
-@media only screen and (min-width: 992px) {
-  .container {
-    min-width: 992px;
-    max-width: 1024px;
   }
 }
