@@ -1,34 +1,10 @@
 @import '../function.scss';
 
-.container {
-  @include triangle-background;
-  @include animate-setup(100);
-}
-
-.container-visible {
-  composes: container;
-  @include animate-show;
-}
-
-.content {
-  margin-top: calculateRem(10);
-  margin-bottom: calculateRem(10);
-}
-
-.copy {
-  padding: calculateRem(30);
-}
-
-.title {
-  @include title;
-}
-
 .text {
   @include paragraphs;
 }
 
 .list {
-  padding: calculateRem(30);
   padding-top: calculateRem(20);
 }
 
@@ -62,14 +38,8 @@
 }
 
 @media only screen and (min-width: 768px) {
-  .container {
-    display: flex;
-    justify-content: center;
-  }
-
   .content {
     display: flex;
-    width: calculateRem(720);
   }
 
   .copy {
@@ -77,17 +47,12 @@
   }
 
   .list {
-    margin-top: calculateRem(16);
+    padding-top: 0;
+    padding-left: calculateRem(40);
   }
 }
 
 @media only screen and (min-width: 992px) {
-  .content {
-    display: flex;
-    min-width: 992px;
-    max-width: 1024px;
-  }
-
   .copy {
     width: 60%;
   }
