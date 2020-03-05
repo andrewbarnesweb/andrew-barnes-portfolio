@@ -1,13 +1,16 @@
 @import '../function.scss';
 
 .container {
-  padding: calculateRem(30);
   @include animate-setup(100);
 }
 
 .container-visible {
   composes: container;
   @include animate-show;
+}
+
+.content {
+  padding: calculateRem(30);
 }
 
 .skills {
@@ -34,8 +37,12 @@
 
 @media only screen and (min-width: 768px) {
   .container {
+    display: flex;
+    justify-content: center;
+  }
+
+  .content {
     width: calculateRem(720);
-    margin: 0 auto;
   }
 
   .info {
@@ -77,7 +84,7 @@
 
 
 @media only screen and (min-width: 992px) {
-  .container {
+  .content {
     min-width: 992px;
     max-width: 1024px;
   }

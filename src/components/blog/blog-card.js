@@ -11,7 +11,7 @@ class BlogCard extends React.Component {
           <span className={style.separator}></span>
           <div className={style.time}>
             <strong>Posted: </strong>
-            <time datetime={this.props.date}>
+            <time dateTime={this.props.date}>
               {this.props.date.toLocaleDateString('en-GB', {
                 year: "numeric",
                 month: "short",

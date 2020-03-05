@@ -1,0 +1,41 @@
+@import '../function.scss';
+
+.container {
+  @include animate-setup(100);
+}
+
+.container-visible {
+  composes: container;
+  @include animate-show;
+}
+
+.container-visible-background {
+  composes: container-visible;
+  @include triangle-background;
+}
+
+.content {
+  padding: calculateRem(30);
+}
+
+.title {
+  @include title;
+}
+
+@media only screen and (min-width: 768px) {
+  .container {
+    display: flex;
+    justify-content: center;
+  }
+
+  .content {
+    width: calculateRem(720);
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .content {
+    min-width: 992px;
+    max-width: 1024px;
+  }
+}
