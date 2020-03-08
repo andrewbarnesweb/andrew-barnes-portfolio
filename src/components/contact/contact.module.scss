@@ -1,0 +1,76 @@
+@import '../function.scss';
+
+.text {
+  @include paragraphs;
+}
+
+.social {
+  margin: calculateRem(32) 0 calculateRem(60);
+  padding: 0;
+
+  li {
+    display: flex;
+    align-items: center;
+    margin-bottom: calculateRem(20);
+  }
+
+  a {
+    font-weight: bold;
+    font-size: calculateRem(14);
+    color: var(--primary);
+    text-decoration: none;
+  }
+
+  svg {
+    fill: var(--primary);
+    width: calculateRem(24);
+    margin-right: calculateRem(12);
+  }
+}
+
+.form {
+  label {
+    font-size: calculateRem(14);
+    font-weight: 600;
+    margin-bottom: calculateRem(8);
+    color: var(--text);
+    display: inline-block;
+  }
+
+  input,
+  textarea {
+    border-radius: calculateRem(4);
+    border: 1px solid #cbcbcb;
+    display: block;
+    width: 100%;
+    font-size: calculateRem(16);
+    padding: calculateRem(8) calculateRem(12);
+    background: #fff;
+    margin-bottom: calculateRem(30);
+  }
+
+  button {
+    @include button;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .content {
+    display: flex;
+  }
+
+  .copy {
+    width: 50%;
+    padding-right: calculateRem(70);
+  }
+
+  .form {
+    width: 50%;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .copy {
+    padding-right: calculateRem(110);
+  }
+}

@@ -33,6 +33,20 @@
   }
 }
 
+@mixin button {
+  background-color: var(--button);
+  cursor: pointer;
+  margin: 0;
+  border: 0;
+  color: #fff;
+  font-size: calculateRem(15);
+  font-weight: bold;
+  text-decoration: none;
+  padding: calculateRem(12) calculateRem(24);
+  display: inline-block;
+  margin-top: calculateRem(20);
+}
+
 @mixin title {
   text-transform: uppercase;
   font-size: calculateRem(18);
