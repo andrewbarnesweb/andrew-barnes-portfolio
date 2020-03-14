@@ -1,0 +1,33 @@
+@import 'function.scss';
+
+.footer {
+  div {
+    text-align: center;
+    font-size: calculateRem(12);
+    color: var(--text);
+    margin: calculateRem(32) 0 calculateRem(80);
+  }
+}
+
+.footer-links {
+  text-align: center;
+  margin-top: calculateRem(50);
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+  }
+
+  li {
+    margin-bottom: calculateRem(18);
+  }
+
+  a {
+    text-transform: uppercase;
+    font-size: calculateRem(14);
+    font-weight: 600;
+    color: var(--primary);
+    text-decoration: none;
+  }
+}
