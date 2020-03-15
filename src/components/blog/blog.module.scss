@@ -6,9 +6,7 @@
   }
 }
 
-.link {
-  @include button;
-}
+@include button(".link");
 
 @media only screen and (min-width: 768px) {
   .posts {

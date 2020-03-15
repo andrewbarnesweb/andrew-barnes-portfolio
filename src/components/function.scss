@@ -33,18 +33,25 @@
   }
 }
 
-@mixin button {
-  background-color: var(--button);
-  cursor: pointer;
-  margin: 0;
-  border: 0;
-  color: #fff;
-  font-size: calculateRem(15);
-  font-weight: bold;
-  text-decoration: none;
-  padding: calculateRem(12) calculateRem(24);
-  display: inline-block;
-  margin-top: calculateRem(20);
+@mixin button($selector) {
+  #{$selector} {
+    background-color: var(--button);
+    cursor: pointer;
+    margin: 0;
+    border: 0;
+    color: #fff;
+    font-size: calculateRem(15);
+    font-weight: bold;
+    text-decoration: none;
+    padding: calculateRem(12) calculateRem(24);
+    display: inline-block;
+    margin-top: calculateRem(20);
+    transition: all .3s;
+
+    &:hover {
+      border-radius: calculateRem(24);
+    }
+  }
 }
 
 @mixin title {

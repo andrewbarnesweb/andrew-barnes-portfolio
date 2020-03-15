@@ -31,3 +31,16 @@
     text-decoration: none;
   }
 }
+
+@media only screen and (min-width: 768px) {
+  .footer-links {
+    ul {
+      display: flex;
+      justify-content: center;
+    }
+
+    li {
+      margin: 0 calculateRem(24);
+    }
+  }
+}

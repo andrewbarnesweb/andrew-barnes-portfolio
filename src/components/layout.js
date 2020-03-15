@@ -12,7 +12,7 @@ const Layout = ({ children }) => {
       <div>
         <main>{children}</main>
         <footer className={style.footer}>
-          <nav className={style.footerLinks}>
+          <nav className={style.footerLinks} aria-label="Footer links">
             <ul>
               <li>
                 <a href="#about-me">About me</a>

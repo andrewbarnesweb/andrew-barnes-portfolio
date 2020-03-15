@@ -47,11 +47,14 @@
     padding: calculateRem(8) calculateRem(12);
     background: #fff;
     margin-bottom: calculateRem(30);
+    color: var(--text);
   }
 
-  button {
-    @include button;
+  textarea {
+    resize: vertical;
   }
+
+  @include button("button");
 }
 
 @media only screen and (min-width: 768px) {
@@ -66,6 +69,11 @@
 
   .form {
     width: 50%;
+
+    input,
+    textarea {
+      font-size: calculateRem(14);
+    }
   }
 }
 
