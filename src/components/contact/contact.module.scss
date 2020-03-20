@@ -19,12 +19,27 @@
     font-size: calculateRem(14);
     color: var(--primary);
     text-decoration: none;
+    position: relative;
+    padding: 0 calculateRem(4);
+
+    @include link-style(-6);
+
+    &:focus {
+      background-color: var(--focus);
+      border-radius: calculateRem(3);
+      outline: none;
+      color: #FFF;
+    }
+
+    &:active {
+      background-color: var(--button);
+    }
   }
 
   svg {
     fill: var(--primary);
     width: calculateRem(24);
-    margin-right: calculateRem(12);
+    margin-right: calculateRem(8);
   }
 }
 
@@ -48,6 +63,12 @@
     background: #fff;
     margin-bottom: calculateRem(30);
     color: var(--text);
+
+    &:focus {
+      box-shadow: 0px 0px 0px 3px var(--focus);
+      border-color: var(--accent-two);
+      outline: none;
+    }
   }
 
   textarea {

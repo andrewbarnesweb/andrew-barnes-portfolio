@@ -27,8 +27,23 @@
     text-transform: uppercase;
     font-size: calculateRem(14);
     font-weight: 600;
+    padding: calculateRem(4);
     color: var(--primary);
     text-decoration: none;
+    position: relative;
+
+    @include link-style(-6);
+
+    &:focus {
+      background-color: var(--focus);
+      border-radius: calculateRem(3);
+      outline: none;
+      color: #FFF;
+    }
+
+    &:active {
+      background-color: var(--button);
+    }
   }
 }
 
@@ -40,7 +55,7 @@
     }
 
     li {
-      margin: 0 calculateRem(24);
+      margin: 0 calculateRem(16);
     }
   }
 }

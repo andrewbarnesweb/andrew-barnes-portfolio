@@ -64,6 +64,21 @@
         fill: #fff;
       }
     }
+
+    &:focus {
+      outline: none;
+      border-bottom: 3px solid var(--focus);
+
+      svg {
+        fill: var(--focus);
+      }
+    }
+
+    &:hover:focus {
+      svg {
+        fill: #fff;
+      }
+    }
   }
 
   li {
