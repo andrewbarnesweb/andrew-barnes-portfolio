@@ -6,6 +6,7 @@ import About from "../components/about/about"
 import WhatIDo from "../components/what-i-do/what-i-do"
 import MyWork from "../components/my-work/my-work"
 import Blog from "../components/blog/blog"
+import Contact from "../components/contact/contact"
 import SEO from "../components/seo"
 
 const IndexPage = () => (
@@ -23,6 +24,9 @@ const IndexPage = () => (
     </section>
     <section id="my-work">
     <MyWork />
+    </section>
+    <section id="contact">
+      <Contact />
     </section>
   </Layout>
 )

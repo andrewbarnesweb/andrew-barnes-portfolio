@@ -25,6 +25,7 @@
     &:focus + label {
       &::after {
         border: calculateRem(2) solid #fff;
+        background-color: var(--focus);
       }
     }
 

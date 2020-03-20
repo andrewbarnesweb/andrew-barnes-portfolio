@@ -41,7 +41,7 @@ class Header extends React.Component {
           <button onClick={this.handleClick} className={style.menuButton} aria-label="Toggle navigation">
             <span className={this.state.condition ? style.menuIconActive : style.menuIcon}></span>
           </button>
-          <nav>
+          <nav aria-label="Main navigation">
             <ul className={this.state.condition ? style.navActive : style.nav}>
               <li><a onClick={this.handleClick} href="#about-me">About me</a></li>
               <li><a onClick={this.handleClick} href="#what-i-do">What I do</a></li>

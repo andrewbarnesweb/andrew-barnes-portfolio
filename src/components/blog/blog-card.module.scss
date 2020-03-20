@@ -2,12 +2,26 @@
 
 .container {
   text-decoration: none;
+
+  &:focus {
+    outline: 3px solid var(--focus);
+    outline-offset: 2px;
+  }
+
+  &:active {
+    outline: none;
+  }
 }
 
 .post {
   background-color: var(--bg);
   padding: calculateRem(20);
   text-align: center;
+  transition: all .3s;
+
+  &:hover {
+    box-shadow: inset 0px 0px 0px calculateRem(3) var(--primary);
+  }
 
   .link {
   font-size: calculateRem(20);

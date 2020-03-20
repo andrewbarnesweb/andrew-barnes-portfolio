@@ -105,6 +105,9 @@
     padding: calculateRem(15) calculateRem(10);
     display: inline-block;
     font-weight: bold;
+    position: relative;
+
+    @include link-style(-8);
   }
 }
 
@@ -168,13 +171,24 @@
     a {
       color: var(--primary);
       margin: 0;
-      padding: 0;
+      padding: 4px;
       text-transform: uppercase;
       font-size: calculateRem(14);
       line-height: calculateRem(14);
       font-weight: 600;
-      margin-left: calculateRem(38);
+      margin-left: calculateRem(30);
       transition: color 0.2s ease-out;
+
+      &:focus {
+        background-color: var(--focus);
+        border-radius: calculateRem(3);
+        outline: none;
+        color: #FFF;
+      }
+
+      &:active {
+        background-color: var(--button);
+      }
     }
   }
 

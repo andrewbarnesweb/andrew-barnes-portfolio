@@ -47,6 +47,8 @@ body {
   --accent-two: #f0f0f0;
   --bar-background: #d8d8d8;
   --button: var(--primary);
+  --focus: #0b74e4;
+  --focus-accent: #81BBF8;
   min-height: 100vh;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
@@ -62,12 +64,19 @@ body {
     --accent-two: #020203;
     --bar-background: #020203;
     --button: #d22aa0;
+    --focus: #0b74e4;
+    --focus-accent: #fff;
   }
 }
 
 body {
   background-color: var(--bg);
   transition: background 0.2s ease-out;
+}
+
+::selection {
+  background-color: var(--primary);
+  color: #fff;
 }
 
 /* Remove list styles on ul, ol elements with a class attribute */
