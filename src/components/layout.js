@@ -27,7 +27,7 @@ const Layout = ({ children }) => {
                 <a href="#my-work">My work</a>
               </li>
               <li>
-                <a href="#contact-me">Contact</a>
+                <a href="#contact">Contact</a>
               </li>
             </ul>
           </nav>
