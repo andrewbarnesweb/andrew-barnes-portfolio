@@ -60,12 +60,13 @@
     width: 100%;
     font-size: calculateRem(16);
     padding: calculateRem(8) calculateRem(12);
-    background: #fff;
+    background: var(--bg);
     margin-bottom: calculateRem(30);
     color: var(--text);
+    -webkit-appearance: none;
 
     &:focus {
-      box-shadow: 0px 0px 0px 3px var(--focus);
+      box-shadow: 0 0 0 calculateRem(3) var(--focus);
       border-color: var(--accent-two);
       outline: none;
     }
