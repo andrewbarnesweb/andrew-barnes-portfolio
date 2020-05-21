@@ -2,7 +2,6 @@ import React from "react"
 import style from "./blog.module.scss"
 import BlogCard from "./blog-card"
 import Section from "../section/section"
-import focusIndicator from "../../images/blog/focus-indicators.jpg"
 import { StaticQuery, graphql } from "gatsby"
 
 class Blog extends React.Component {
