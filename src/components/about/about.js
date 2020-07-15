@@ -27,9 +27,9 @@ class About extends React.Component {
         <div className={style.content}>
           <div className={style.copy}>
             <div className={style.text}>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
-              <p>Ut enim ad minim veniam, quis nostrud exercitation. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-              <p>Enim ad minim veniam, quis nostrud exercitation.</p>
+              <p>I have commercial experience in both UX and Web Development, which has enabled me to have a good understanding of the design, experience and development of web products. I have a passion for web design, and love turning those ideas into reality.</p>
+              <p>I've created this slice of the web to give an overview of what I do and to signpost to things I've written and worked on. If you have a project that you think I can help with, or just want to say hello, then <a href="#contact">get in touch</a>.</p>
+              <p>I'm a big fan of technology, 80's music and Dominic Toretto.</p>
             </div>
           </div>
 

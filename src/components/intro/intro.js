@@ -24,7 +24,7 @@ class Intro extends React.Component {
             <h1 className={style.name}>Andrew Barnes</h1>
             <h2 className={style.title}>Front End Developer</h2>
             <div className={style.intro}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.
+              I am a motivated front-end developer based in the United Kingdom, skilled in a broad range of the latest online technologies. I am passionate about the work I do - creating accessible and optimised experiences.
             </div>
           </div>
           <ul className={style.list}>

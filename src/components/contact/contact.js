@@ -10,9 +10,8 @@ class Contact extends React.Component {
         <div className={style.content}>
           <div className={style.copy}>
             <div className={style.text}>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
-              <p>Ut enim ad minim veniam, quis nostrud exercitation. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-              <p>Enim ad minim veniam, quis nostrud exercitation.</p>
+              <p><strong>If you want to get in touch, it'd be great to hear from you! Will be a nice break from the spam that generally comes through...</strong></p>
+              <p>I'm always interested to hear about potential projects and opportunities. I won't always be available, but I'll be sure to let you know as soon as possible.</p>
             </div>
 
             <ul className={style.social}>

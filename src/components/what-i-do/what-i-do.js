@@ -28,14 +28,14 @@ class WhatIDo extends React.Component {
           <div className={style.skillsContainer}>
             <SkillCard icon="code" skill="Web development">
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation. Quis nostrud exercitation.
+                I have been building websites for as long as I can remember. I am a strong believer in an accessible and fast web, by coding in a way that everyone can enjoy.
               </p>
             </SkillCard>
           </div>
           <div className={style.skillsContainer}>
             <SkillCard icon="design" skill="UI design">
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation. Quis nostrud exercitation.
+                I'm experienced in designing clean and accessible user interfaces. From wireframes to high fidelity designs. I like to make things look nice!
               </p>
             </SkillCard>
           </div>
@@ -43,25 +43,32 @@ class WhatIDo extends React.Component {
 
         <div className={style.info}>
           <div className={style.text}>
-            <p><strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</strong></p>
-            <p>Ut enim ad minim veniam, quis nostrud exercitation. Ut enim ad minim veniam, quis nostrud exercitation. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</p>
+            <p><strong>Given my professional background, I have a fairly wide skill set. If I had to summarise, I'd classify myself as a developer who likes to design.</strong></p>
+            <p>I have a good understanding of the fundamentals of UX and accessibility, which helps me to create designs that people will be comfortable using from the start.
+              I am well versed in Sketch and XD to create pixel perfect designs.</p>
+            <p>
+              HTML and CSS has always been my bag, but times are changing, and so are my skills. I've recently started writing JavaScript in TypeScript and getting more familiar with React.
+            </p>
           </div>
           <div className={style.charts}>
-            <h3 className={style.skillTitle}>Skill one</h3>
+            <h3 className={style.skillTitle}>HTML + CSS/SASS</h3>
             <VisibilitySensor partialVisibility={true} onChange={this.onChange.bind(this)}>
-              <Progress initial="0%" actual="80%" start={this.state.visible} />
+              <Progress initial="0%" actual="100%" start={this.state.visible} />
             </VisibilitySensor>
-            <h3 className={style.skillTitle}>Skill two</h3>
-            <Progress initial="0%" actual="90%" start={this.state.visible} />
+            <h3 className={style.skillTitle}>TypeScript/JavaScript</h3>
+            <Progress initial="0%" actual="80%" start={this.state.visible} />
 
-            <h3 className={style.skillTitle}>Skill three</h3>
+            <h3 className={style.skillTitle}>React</h3>
             <Progress initial="0%" actual="75%" start={this.state.visible} />
 
-            <h3 className={style.skillTitle}>Skill four</h3>
+            <h3 className={style.skillTitle}>Accessibility</h3>
             <Progress initial="0%" actual="85%" start={this.state.visible} />
 
-            <h3 className={style.skillTitle}>Social skills</h3>
-            <Progress initial="0%" actual="95%" start={this.state.visible} />
+            <h3 className={style.skillTitle}>Design/Sketch</h3>
+            <Progress initial="0%" actual="80%" start={this.state.visible} />
+
+            <h3 className={style.skillTitle}>Sending GIFs</h3>
+            <Progress initial="0%" actual="100%" start={this.state.visible} />
           </div>
         </div>
       </Section>

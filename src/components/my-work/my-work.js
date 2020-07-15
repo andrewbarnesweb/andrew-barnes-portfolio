@@ -42,24 +42,40 @@ class MyWork extends React.Component {
                 year="2020"
                 skills="Design / Development / Sketch / Grav"
               >
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <p>
+                  A full design and development project for an Independent Mortgage and Protection Advice company in the UK.
+                </p>
+                <p>
+                  The site was designed in Sketch, using InVision to get sign off from the client. And given some requirements about adding news stories,
+                  a <a href="https://getgrav.org/" title="GRAV CMS">flat file CMS system</a> was used to manage the content.
+                </p>
+                <p>
+                  <a href="https://rfs-ltd.co.uk" title="Russell Financial Solutions website"><strong>View website</strong></a>.
+                </p>
               </Work>
               <Work
                 title="Play Cricket Concept"
-                type="Web design and development"
+                type="UI design"
                 image={data.playCricket.childImageSharp.fluid}
-                year="2020"
+                year="2016"
                 alternate={true}
               >
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <p>
+                  Being a failed local cricketer and interested in results from many clubs around the country, I wanted a simple app that would allow me to quickly view results.
+                </p>
+                <p>
+                  The app would allow me to track teams and leagues from Play Cricket, and see results and scorecards. So I set about designing some screens in Sketch for a potential iOS based solution.
+                </p>
               </Work>
               <Work
                 title="The Economist"
-                type="Web design and development"
+                type="Web development"
                 image={data.economist.childImageSharp.fluid}
-                year="2020"
+                year="2016"
               >
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <p>
+                  An infographic was created to explore an aeroplane of the future. Working closely with the designer, the template and responsive infographic were created using HTML5 and jQuery.
+                </p>
               </Work>
             </Section>
           </>
