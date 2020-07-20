@@ -1,7 +1,6 @@
 @import '../function.scss';
 
 .skill {
-  background: linear-gradient(140deg, var(--accent-one) 40%, var(--accent-two) calc(40% + 1px));
   padding: calculateRem(24);
 
   h3 {

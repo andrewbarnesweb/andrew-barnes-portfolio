@@ -1,5 +1,6 @@
 import React from "react"
 import style from "./blog-card.module.scss"
+import Img from "gatsby-image"
 
 class BlogCard extends React.Component {
 
@@ -19,7 +20,7 @@ class BlogCard extends React.Component {
               })}
             </time>
           </div>
-            <img src={this.props.image} alt="" />
+            <Img fluid={this.props.image} alt="" />
         </div>
       </a>
     );

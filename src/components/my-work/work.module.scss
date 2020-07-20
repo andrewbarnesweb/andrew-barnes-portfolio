@@ -2,10 +2,25 @@
 
 .work {
   margin-bottom: calculateRem(40);
-}
 
-.image {
-  background-color: var(--accent-one);
+  a {
+    color: var(--primary);
+    text-decoration: none;
+    position: relative;
+
+    @include link-style(-6);
+
+    &:focus {
+      background-color: var(--focus);
+      border-radius: calculateRem(3);
+      outline: none;
+      color: #FFF;
+    }
+
+    &:active {
+      background-color: var(--button);
+    }
+  }
 }
 
 .details {
