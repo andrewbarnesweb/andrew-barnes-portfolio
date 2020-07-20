@@ -1,0 +1,28 @@
+@import '../function.scss';
+
+.posts {
+  div {
+    margin-bottom: calculateRem(20);
+  }
+}
+
+@include button(".link");
+
+@media only screen and (min-width: 768px) {
+  .posts {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: calculateRem(16);
+    column-gap: calculateRem(16);
+    grid-row-gap: calculateRem(16);
+    row-gap: calculateRem(16);
+
+    div {
+      margin-bottom: 0;
+    }
+  }
+
+  .link {
+    margin-top: calculateRem(40);
+  }
+}

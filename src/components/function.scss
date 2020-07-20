@@ -1,0 +1,98 @@
+@function calculateRem($size) {
+  $remSize: $size / 16;
+  @return #{$remSize}rem;
+}
+
+@mixin animate-setup($position) {
+  opacity: 1;
+  visibility: visible;
+  transform: translate(0, #{$position}px);
+  transition: transform 400ms ease-out 100ms, opacity 400ms ease-out 100ms;
+}
+
+@mixin animate-show {
+  opacity: 1;
+  visibility: visible;
+  transform: translate(0, 0);
+  transition: transform 400ms ease-out 100ms, opacity 400ms ease-out 100ms;
+}
+
+@mixin text {
+  font-size: calculateRem(14);
+  line-height: calculateRem(23);
+  color: var(--text);
+}
+
+@mixin paragraphs {
+  p {
+    @include text;
+
+    &:not(:last-child) {
+      margin-bottom: calculateRem(36);
+    }
+  }
+}
+
+@mixin button($selector) {
+  #{$selector} {
+    background-color: var(--button);
+    cursor: pointer;
+    margin: 0;
+    border: 0;
+    color: #fff;
+    font-size: calculateRem(15);
+    font-weight: bold;
+    text-decoration: none;
+    padding: calculateRem(12) calculateRem(24);
+    display: inline-block;
+    margin-top: calculateRem(20);
+    transition: all .3s;
+
+    &:hover {
+      border-radius: calculateRem(24);
+    }
+
+    &:focus {
+      background-color: var(--focus);
+      outline: 0;
+      box-shadow: 0 0 0 calculateRem(3) var(--focus-accent);
+    }
+  }
+}
+
+@mixin link-style($bottom) {
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: calculateRem($bottom);
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 1px;
+    transform: scaleX(0);
+    background-color: var(--primary);
+    transition: transform 0.3s;
+  }
+
+  &:hover {
+    &::after {
+      transform: scaleX(1);
+    }
+
+    &::before {
+      transform: scaleX(1);
+    }
+  }
+}
+
+@mixin title {
+  text-transform: uppercase;
+  font-size: calculateRem(18);
+  font-weight: bold;
+  color: var(--header);
+  margin-bottom: calculateRem(30);
+}
+
+@mixin triangle-background {
+  background: linear-gradient(to bottom right, var(--accent-one) 0%, var(--accent-one) 50%, var(--accent-two) 50%, var(--accent-two) 100%);
+}

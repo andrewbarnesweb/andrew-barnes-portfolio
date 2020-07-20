@@ -1,0 +1,157 @@
+@import '../function.scss';
+
+.container {
+  margin-top: calculateRem(36);
+  margin-bottom: calculateRem(62);
+  @include animate-setup(100);
+}
+
+.container-visible {
+  composes: container;
+  @include animate-show;
+}
+
+.image {
+  border-radius: 50%;
+  border: calculateRem(10) solid var(--accent-one);
+  width: calculateRem(148);
+  height: calculateRem(148);
+  box-shadow: 0 calculateRem(2) calculateRem(36) rgba(0, 0, 0, .2);
+  margin: 0 auto;
+}
+
+.content {
+  text-align: center;
+}
+
+.name {
+  font-size: calculateRem(32);
+  line-height: calculateRem(32);
+  font-weight: bold;
+  color: var(--header);
+  margin: calculateRem(10) 0 0;
+}
+
+.title {
+  font-size: calculateRem(16);
+  font-weight: 600;
+  color: var(--text);
+}
+
+.intro {
+  @include text;
+  margin: calculateRem(14) auto;
+  padding-left: calculateRem(30);
+  padding-right: calculateRem(30);
+  max-width: calculateRem(480);
+}
+
+.list {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+
+  a {
+    font-size: 0;
+    display: inline-block;
+    border-radius: calculateRem(2);
+    transition: all .3s;
+
+    &:hover {
+      background-color: var(--button);
+
+      svg {
+        fill: #fff;
+      }
+    }
+
+    &:focus {
+      outline: none;
+      border-bottom: 3px solid var(--focus);
+
+      svg {
+        fill: var(--focus);
+      }
+    }
+
+    &:hover:focus {
+      svg {
+        fill: #fff;
+      }
+    }
+  }
+
+  li {
+    padding-left: calculateRem(4);
+    padding-right: calculateRem(4);
+  }
+
+  svg {
+    fill: var(--primary);
+    height: calculateRem(28);
+    padding: calculateRem(4);
+    transition: all .3s;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .container {
+    display: flex;
+    justify-content: center;
+    margin-top: calculateRem(60);
+    margin-bottom: calculateRem(70);
+  }
+
+  .content {
+    text-align: left;
+    margin-left: calculateRem(32);
+  }
+
+  .text {
+    padding-left: calculateRem(8);
+  }
+
+  .name {
+    margin-top: 0;
+  }
+
+  .image {
+    margin: 0;
+  }
+
+  .intro {
+    margin-left: 0;
+    margin-right: 0;
+    padding: 0;
+  }
+
+  .list {
+    justify-content: start;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .container {
+    margin-top: calculateRem(80);
+    margin-bottom: calculateRem(90);
+  }
+
+  .name {
+    font-size: calculateRem(44);
+    line-height: calculateRem(44);
+    margin-bottom: calculateRem(6);
+  }
+
+  .title {
+    font-size: calculateRem(18);
+  }
+
+  .intro {
+    max-width: calculateRem(520);
+  }
+
+  .image {
+    width: calculateRem(208);
+    height: calculateRem(208);
+  }
+}

@@ -1,0 +1,78 @@
+@import '../function.scss';
+
+.text {
+  @include paragraphs;
+
+  a {
+    color: var(--primary);
+    text-decoration: none;
+    position: relative;
+
+    @include link-style(-6);
+
+    &:focus {
+      background-color: var(--focus);
+      border-radius: calculateRem(3);
+      outline: none;
+      color: #FFF;
+    }
+
+    &:active {
+      background-color: var(--button);
+    }
+  }
+}
+
+.list {
+  padding-top: calculateRem(20);
+}
+
+.pair {
+  display: flex;
+  align-items: center;
+  margin-bottom: calculateRem(20);
+
+  .icon {
+    fill: var(--primary);
+    margin-right: calculateRem(10);
+  }
+
+  address {
+    font-style: normal;
+  }
+
+  dt {
+    display: flex;
+    align-items: center;
+    color: var(--header);
+    font-size: calculateRem(14);
+    font-weight: bold;
+    width: calculateRem(100);
+  }
+
+  dd {
+    color: var(--text);
+    font-size: calculateRem(14);
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .content {
+    display: flex;
+  }
+
+  .copy {
+    width: 50%;
+  }
+
+  .list {
+    padding-top: 0;
+    padding-left: calculateRem(40);
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .copy {
+    width: 60%;
+  }
+}

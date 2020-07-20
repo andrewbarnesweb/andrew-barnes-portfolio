@@ -1,0 +1,21 @@
+@import '../function.scss';
+
+.skill {
+  padding: calculateRem(24);
+
+  h3 {
+    color: var(--header);
+    font-size: calculateRem(18);
+    font-weight: bold;
+    margin-bottom: calculateRem(20);
+    display: flex;
+    align-items: center;
+  }
+
+  svg {
+    fill: var(--primary);
+    margin-right: calculateRem(12);
+  }
+
+  @include paragraphs;
+}

@@ -1,0 +1,21 @@
+@import '../components/function.scss';
+
+.error {
+  text-align: center;
+  margin-top: 6rem;
+
+  h1 {
+    color: #fff;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    color: #fff;
+  }
+
+  a {
+    color: #fff;
+    font-weight: bold;
+  }
+}
