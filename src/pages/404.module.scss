@@ -5,17 +5,17 @@
   margin-top: 6rem;
 
   h1 {
-    color: #fff;
+    color: var(--header);
     font-size: 3rem;
     margin-bottom: 1rem;
   }
 
   p {
-    color: #fff;
+    color: var(--text);
   }
 
   a {
-    color: #fff;
+    color: var(--text);
     font-weight: bold;
   }
 }
