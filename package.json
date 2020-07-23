@@ -37,7 +37,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run lint"
+      "pre-commit": "npm run format && git add ."
     }
   },
   "keywords": [
@@ -47,11 +47,12 @@
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
-    "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx,scss,json,md}\"",
+    "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx,scss,json,md}\" && eslint --fix --ext .jsx .",
     "start": "npm run develop",
     "serve": "gatsby serve",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing \"",
-    "lint": "eslint --ext .jsx ."
+    "lint-eslint": "eslint --ext .jsx .",
+    "lint-prettier": "prettier --check \"src/**/*.{js,jsx,ts,tsx,scss,json,md}\""
   },
   "repository": {
     "type": "git",
