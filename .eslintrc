@@ -1,0 +1,30 @@
+{
+  "extends": "airbnb",
+  "rules": {
+    "quotes": [
+      "error",
+      "double"
+    ],
+    "jsx-a11y/label-has-associated-control": [
+      2,
+      {
+        "components": [
+          "Label"
+        ],
+        "required": {
+          "some": [
+            "nesting",
+            "id"
+          ]
+        },
+        "allowChildren": false
+      }
+    ],
+    "react/jsx-one-expression-per-line": [
+      0,
+      {
+        "allow": "literal"
+      }
+    ]
+  }
+}

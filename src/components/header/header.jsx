@@ -1,33 +1,37 @@
-import React from "react"
-import style from "./header.module.scss"
-import Toggle from "./toggle.js"
-
+import React from "react";
+import style from "./header.module.scss";
+import Toggle from "./toggle";
 
 class Header extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
     this.state = {
       condition: false,
       visible: false,
-    }
-    this.handleClick = this.handleClick.bind(this)
-  }
-  handleClick() {
-    this.setState({
-      condition: !this.state.condition
-    })
+    };
+    this.handleClick = this.handleClick.bind(this);
   }
 
   componentDidMount() {
     this.setState({
-      visible: true
-    })
+      visible: true,
+    });
+  }
+
+  handleClick() {
+    const { condition } = this.state;
+    this.setState({
+      condition: !condition,
+    });
   }
 
   render() {
+    const { visible } = this.state;
+    const { condition } = this.state;
+
     return (
-      <header className={this.state.visible ? style.containerVisible : style.container}>
-        <div className={this.state.condition ? style.menuContainerActive : style.menuContainer}>
+      <header className={visible ? style.containerVisible : style.container}>
+        <div className={condition ? style.menuContainerActive : style.menuContainer}>
           <svg className={style.logo} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 54 54" role="img" aria-labelledby="logo-title">
             <title id="logo-title">Logo</title>
             <g data-name="Oval 1 + AB" transform="translate(-0.35 -0.35)">
@@ -38,11 +42,11 @@ class Header extends React.Component {
           </svg>
 
           <div className={style.name}>Andrew <strong>Barnes</strong></div>
-          <button onClick={this.handleClick} className={style.menuButton} aria-label="Toggle navigation">
-            <span className={this.state.condition ? style.menuIconActive : style.menuIcon}></span>
+          <button type="button" onClick={this.handleClick} className={style.menuButton} aria-label="Toggle navigation">
+            <span className={condition ? style.menuIconActive : style.menuIcon} />
           </button>
           <nav aria-label="Main navigation">
-            <ul className={this.state.condition ? style.navActive : style.nav}>
+            <ul className={condition ? style.navActive : style.nav}>
               <li><a onClick={this.handleClick} href="#about-me">About me</a></li>
               <li><a onClick={this.handleClick} href="#what-i-do">What I do</a></li>
               <li><a onClick={this.handleClick} href="#blog">Blog</a></li>
@@ -57,4 +61,4 @@ class Header extends React.Component {
   }
 }
 
-export default Header
+export default Header;

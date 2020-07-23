@@ -1,35 +1,45 @@
-import React from "react"
-import style from "./about.module.scss"
-import Section from "../section/section"
+import React from "react";
+import style from "./about.module.scss";
+import Section from "../section/section";
 
+function getAge(dateString) {
+  const today = new Date();
+  const birthDate = new Date(dateString);
+  let age = today.getFullYear() - birthDate.getFullYear();
+  const m = today.getMonth() - birthDate.getMonth();
+  if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
+    age -= 1;
+  }
+  return age;
+}
 class About extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
     this.state = {
-      age: this.getAge("1984/12/19"),
-    }
-  }
-
-  getAge(dateString) {
-    var today = new Date();
-    var birthDate = new Date(dateString);
-    var age = today.getFullYear() - birthDate.getFullYear();
-    var m = today.getMonth() - birthDate.getMonth();
-    if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
-      age--;
-    }
-    return age;
+      age: getAge("1984/12/19"),
+    };
   }
 
   render() {
+    const { age } = this.state;
+
     return (
-      <Section title="About me" background={true}>
+      <Section title="About me" background>
         <div className={style.content}>
           <div className={style.copy}>
             <div className={style.text}>
-              <p>I have commercial experience in both UX and Web Development, which has enabled me to have a good understanding of the design, experience and development of web products. I have a passion for web design, and love turning those ideas into reality.</p>
-              <p>I've created this slice of the web to give an overview of what I do and to signpost to things I've written and worked on. If you have a project that you think I can help with, or just want to say hello, then <a href="#contact">get in touch</a>.</p>
-              <p>I'm a big fan of technology, 80's music and Dominic Toretto.</p>
+              <p>
+                I have dd commercial experience in both UX and Web Development, which has enabled me
+                to have a good understanding of the design, experience and development of web
+                products. I have a passion for web design, and love turning those ideas into
+                reality.
+              </p>
+              <p>
+                I&apos;ve created this slice of the web to give an overview of what I do and to
+                signpost to things I&apos;ve written and worked on. If you have a project that you
+                think I can help with, or just want to say hello, then <a href="#contact">get in touch</a>.
+              </p>
+              <p>I&apos;m a big fan of technology, 80&apos;s music and Dominic Toretto.</p>
             </div>
           </div>
 
@@ -40,7 +50,7 @@ class About extends React.Component {
                   <path d="M13.333,13.333H10.667V10.667h2.667Zm-4-6.667H6.667V9.333H9.333Zm4,0H10.667V9.333h2.667Zm-8,4H2.667v2.667H5.333Zm4,0H6.667v2.667H9.333Zm-4-4H2.667V9.333H5.333ZM16,1.333V16H0V1.333H2V2A1.333,1.333,0,0,0,4.667,2V1.333h6.667V2A1.333,1.333,0,1,0,14,2V1.333Zm-1.333,4H1.333v9.333H14.667ZM13.333.667A.667.667,0,0,0,12,.667V2a.667.667,0,0,0,1.333,0ZM4,2A.667.667,0,1,1,2.667,2V.667A.667.667,0,1,1,4,.667Z" />
                 </svg>
                 Age
-              </dt><dd>{this.state.age}</dd>
+              </dt><dd>{age}</dd>
             </div>
             <div className={style.pair}>
               <dt>
@@ -78,4 +88,4 @@ class About extends React.Component {
   }
 }
 
-export default About
+export default About;

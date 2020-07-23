@@ -1,30 +1,35 @@
-import React from "react"
-import style from "./intro.module.scss"
-import avatar from "../../images/avatar.jpg"
+import React from "react";
+import style from "./intro.module.scss";
+import avatar from "../../images/avatar.jpg";
+
 class Intro extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
     this.state = {
       visible: false,
-    }
+    };
   }
 
   componentDidMount() {
     this.setState({
-      visible: true
-    })
+      visible: true,
+    });
   }
 
   render() {
+    const { visible } = this.state;
+
     return (
-      <div className={this.state.visible ? style.containerVisible : style.container}>
+      <div className={visible ? style.containerVisible : style.container}>
         <img className={style.image} src={avatar} alt="What I look like" />
         <div className={style.content}>
           <div className={style.text}>
             <h1 className={style.name}>Andrew Barnes</h1>
             <h2 className={style.title}>Front End Developer</h2>
             <div className={style.intro}>
-              I am a motivated front-end developer based in the United Kingdom, skilled in a broad range of the latest online technologies. I am passionate about the work I do - creating accessible and optimised experiences.
+              I am a motivated front-end developer based in the United Kingdom, skilled in a broad
+              range of the latest online technologies. I am passionate about the work I do
+              - creating accessible and optimised experiences.
             </div>
           </div>
           <ul className={style.list}>
@@ -69,4 +74,4 @@ class Intro extends React.Component {
   }
 }
 
-export default Intro
+export default Intro;
