@@ -1,4 +1,4 @@
-@import '../function.scss';
+@import "../function.scss";
 
 .container {
   @include animate-setup(100);
@@ -19,7 +19,11 @@
   }
 
   .skills-container {
-    background: linear-gradient(140deg, var(--accent-one) 40%, var(--accent-two) calc(40% + 1px));
+    background: linear-gradient(
+      140deg,
+      var(--accent-one) 40%,
+      var(--accent-two) calc(40% + 1px)
+    );
   }
 }
 
@@ -80,7 +84,6 @@
     }
   }
 }
-
 
 @media only screen and (min-width: 992px) {
   .content {

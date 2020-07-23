@@ -1,4 +1,4 @@
-@import '../function.scss';
+@import "../function.scss";
 
 .container {
   text-decoration: none;
@@ -17,16 +17,16 @@
   background-color: var(--bg);
   padding: calculateRem(20);
   text-align: center;
-  transition: all .3s;
+  transition: all 0.3s;
 
   &:hover {
     box-shadow: inset 0px 0px 0px calculateRem(3) var(--primary);
   }
 
   .link {
-  font-size: calculateRem(20);
-  font-weight: normal;
-  color: var(--primary);
+    font-size: calculateRem(20);
+    font-weight: normal;
+    color: var(--primary);
   }
 
   .separator {
@@ -42,4 +42,3 @@
     margin-bottom: calculateRem(26);
   }
 }
-

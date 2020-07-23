@@ -1,4 +1,4 @@
-@import '../function.scss';
+@import "../function.scss";
 
 .container {
   margin-top: calculateRem(36);
@@ -16,7 +16,7 @@
   border: calculateRem(10) solid var(--accent-one);
   width: calculateRem(148);
   height: calculateRem(148);
-  box-shadow: 0 calculateRem(2) calculateRem(36) rgba(0, 0, 0, .2);
+  box-shadow: 0 calculateRem(2) calculateRem(36) rgba(0, 0, 0, 0.2);
   margin: 0 auto;
 }
 
@@ -55,7 +55,7 @@
     font-size: 0;
     display: inline-block;
     border-radius: calculateRem(2);
-    transition: all .3s;
+    transition: all 0.3s;
 
     &:hover {
       background-color: var(--button);
@@ -90,7 +90,7 @@
     fill: var(--primary);
     height: calculateRem(28);
     padding: calculateRem(4);
-    transition: all .3s;
+    transition: all 0.3s;
   }
 }
 

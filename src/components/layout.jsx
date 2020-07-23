@@ -30,7 +30,7 @@ const Layout = ({ children }) => (
             </li>
           </ul>
         </nav>
-        <div>&copy; Andrew Barnes {(new Date().getFullYear())}</div>
+        <div>&copy; Andrew Barnes {new Date().getFullYear()}</div>
       </footer>
     </div>
   </>

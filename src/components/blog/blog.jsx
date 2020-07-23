@@ -22,7 +22,9 @@ const Blog = () => (
             }
           }
         }
-        focusIndicators: file(relativePath: { eq: "blog/focus-indicators.jpg" }) {
+        focusIndicators: file(
+          relativePath: { eq: "blog/focus-indicators.jpg" }
+        ) {
           childImageSharp {
             fluid(maxWidth: 500, quality: 80) {
               ...GatsbyImageSharpFluid
@@ -38,7 +40,7 @@ const Blog = () => (
         }
       }
     `}
-    render={(data) => (
+    render={data => (
       <>
         <Section title="Blog" background>
           <div className={style.posts}>
@@ -67,12 +69,19 @@ const Blog = () => (
               image={data.variableNames.childImageSharp.fluid}
             />
           </div>
-          <div><a className={style.link} href="https://medium.com/@andrew_barnes" title="Medium Posts">See all posts</a></div>
+          <div>
+            <a
+              className={style.link}
+              href="https://medium.com/@andrew_barnes"
+              title="Medium Posts"
+            >
+              See all posts
+            </a>
+          </div>
         </Section>
       </>
     )}
   />
-
 );
 
 export default Blog;

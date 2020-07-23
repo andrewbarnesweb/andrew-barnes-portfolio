@@ -3,12 +3,7 @@ import Img from "gatsby-image";
 import PropTypes from "prop-types";
 import style from "./blog-card.module.scss";
 
-const BlogCard = ({
-  link,
-  title,
-  date,
-  image,
-}) => (
+const BlogCard = ({ link, title, date, image }) => (
   <a className={style.container} href={link} title={title}>
     <div className={style.post}>
       <h3 className={style.link}>{title}</h3>
