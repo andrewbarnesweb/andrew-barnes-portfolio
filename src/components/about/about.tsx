@@ -12,7 +12,7 @@ function getAge(dateString) {
   }
   return age;
 }
-class About extends React.Component {
+class About extends React.Component<{}, { age: number }> {
   constructor(props) {
     super(props);
     this.state = {
@@ -29,22 +29,18 @@ class About extends React.Component {
           <div className={style.copy}>
             <div className={style.text}>
               <p>
-                I have dd commercial experience in both UX and Web Development,
-                which has enabled me to have a good understanding of the design,
-                experience and development of web products. I have a passion for
-                web design, and love turning those ideas into reality.
+                I have dd commercial experience in both UX and Web Development, which has enabled me
+                to have a good understanding of the design, experience and development of web
+                products. I have a passion for web design, and love turning those ideas into
+                reality.
               </p>
               <p>
-                I&apos;ve created this slice of the web to give an overview of
-                what I do and to signpost to things I&apos;ve written and worked
-                on. If you have a project that you think I can help with, or
-                just want to say hello, then <a href="#contact">get in touch</a>
-                .
+                I&apos;ve created this slice of the web to give an overview of what I do and to
+                signpost to things I&apos;ve written and worked on. If you have a project that you
+                think I can help with, or just want to say hello, then{" "}
+                <a href="#contact">get in touch</a>.
               </p>
-              <p>
-                I&apos;m a big fan of technology, 80&apos;s music and Dominic
-                Toretto.
-              </p>
+              <p>I&apos;m a big fan of technology, 80&apos;s music and Dominic Toretto.</p>
             </div>
           </div>
 

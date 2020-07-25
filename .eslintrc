@@ -1,21 +1,16 @@
 {
-  "extends": ["airbnb", "prettier"],
+  "extends": ["airbnb-typescript", "prettier"],
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  },
   "rules": {
-    "quotes": [
-      "error",
-      "double"
-    ],
+    "@typescript-eslint/quotes": [2, "double", "avoid-escape"],
     "jsx-a11y/label-has-associated-control": [
       2,
       {
-        "components": [
-          "Label"
-        ],
+        "components": ["Label"],
         "required": {
-          "some": [
-            "nesting",
-            "id"
-          ]
+          "some": ["nesting", "id"]
         },
         "allowChildren": false
       }

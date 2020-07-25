@@ -22,9 +22,7 @@ const Blog = () => (
             }
           }
         }
-        focusIndicators: file(
-          relativePath: { eq: "blog/focus-indicators.jpg" }
-        ) {
+        focusIndicators: file(relativePath: { eq: "blog/focus-indicators.jpg" }) {
           childImageSharp {
             fluid(maxWidth: 500, quality: 80) {
               ...GatsbyImageSharpFluid
@@ -70,11 +68,7 @@ const Blog = () => (
             />
           </div>
           <div>
-            <a
-              className={style.link}
-              href="https://medium.com/@andrew_barnes"
-              title="Medium Posts"
-            >
+            <a className={style.link} href="https://medium.com/@andrew_barnes" title="Medium Posts">
               See all posts
             </a>
           </div>

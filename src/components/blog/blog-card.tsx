@@ -26,15 +26,15 @@ const BlogCard = ({ link, title, date, image }) => (
 BlogCard.propTypes = {
   link: PropTypes.string,
   title: PropTypes.string,
-  date: PropTypes.string,
-  image: PropTypes.string,
+  date: PropTypes.instanceOf(Date),
+  image: PropTypes.objectOf(PropTypes.object),
 };
 
 BlogCard.defaultProps = {
   link: "",
   title: "",
   date: "",
-  image: "",
+  image: null,
 };
 
 export default BlogCard;

@@ -5,7 +5,7 @@ import Section from "../section/section";
 import SkillCard from "./skill-card";
 import Progress from "./progress";
 
-class WhatIDo extends React.Component {
+class WhatIDo extends React.Component<{}, { visible: boolean }> {
   constructor(props) {
     super(props);
     this.onChange = this.onChange.bind(this);
@@ -29,20 +29,18 @@ class WhatIDo extends React.Component {
       <Section title="What I do">
         <div className={style.skills}>
           <div className={style.skillsContainer}>
-            <SkillCard icon=" code" skill="Web development">
+            <SkillCard icon="code" skill="Web development">
               <p>
-                I have been building websites for as long as I can remember. I
-                am a strong believer in an accessible and fast web, by coding in
-                a way that everyone can enjoy.
+                I have been building websites for as long as I can remember. I am a strong believer
+                in an accessible and fast web, by coding in a way that everyone can enjoy.
               </p>
             </SkillCard>
           </div>
           <div className={style.skillsContainer}>
             <SkillCard icon="design" skill="UI design">
               <p>
-                I&apos;m experienced in designing clean and accessible user
-                interfaces. From wireframes to high fidelity designs. I like to
-                make things look nice!
+                I&apos;m experienced in designing clean and accessible user interfaces. From
+                wireframes to high fidelity designs. I like to make things look nice!
               </p>
             </SkillCard>
           </div>
@@ -52,21 +50,19 @@ class WhatIDo extends React.Component {
           <div className={style.text}>
             <p>
               <strong>
-                Given my professional background, I have a fairly wide skill
-                set. If I had to summarise, I&apos;d classify myself as a
-                developer who likes to design.
+                Given my professional background, I have a fairly wide skill set. If I had to
+                summarise, I&apos;d classify myself as a developer who likes to design.
               </strong>
             </p>
             <p>
-              I have a good understanding of the fundamentals of UX and
-              accessibility, which helps me to create designs that people will
-              be comfortable using from the start. I am well versed in Sketch
-              and XD to create pixel perfect designs.
+              I have a good understanding of the fundamentals of UX and accessibility, which helps
+              me to create designs that people will be comfortable using from the start. I am well
+              versed in Sketch and XD to create pixel perfect designs.
             </p>
             <p>
-              HTML and CSS has always been my bag, but times are changing, and
-              so are my skills. I&apos;ve recently started writing JavaScript in
-              TypeScript and getting more familiar with React.
+              HTML and CSS has always been my bag, but times are changing, and so are my skills.
+              I&apos;ve recently started writing JavaScript in TypeScript and getting more familiar
+              with React.
             </p>
           </div>
           <div className={style.charts}>

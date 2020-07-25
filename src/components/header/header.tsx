@@ -2,7 +2,7 @@ import React from "react";
 import style from "./header.module.scss";
 import Toggle from "./toggle";
 
-class Header extends React.Component {
+class Header extends React.Component<{}, { visible: boolean; condition: boolean }> {
   constructor(props) {
     super(props);
     this.state = {
@@ -31,11 +31,7 @@ class Header extends React.Component {
 
     return (
       <header className={visible ? style.containerVisible : style.container}>
-        <div
-          className={
-            condition ? style.menuContainerActive : style.menuContainer
-          }
-        >
+        <div className={condition ? style.menuContainerActive : style.menuContainer}>
           <svg
             className={style.logo}
             xmlns="http://www.w3.org/2000/svg"
@@ -82,9 +78,7 @@ class Header extends React.Component {
             className={style.menuButton}
             aria-label="Toggle navigation"
           >
-            <span
-              className={condition ? style.menuIconActive : style.menuIcon}
-            />
+            <span className={condition ? style.menuIconActive : style.menuIcon} />
           </button>
           <nav aria-label="Main navigation">
             <ul className={condition ? style.navActive : style.nav}>

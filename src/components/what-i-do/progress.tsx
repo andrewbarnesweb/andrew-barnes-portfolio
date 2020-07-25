@@ -9,15 +9,15 @@ const Progress = ({ start, actual, initial }) => (
 );
 
 Progress.propTypes = {
-  start: PropTypes.number,
-  actual: PropTypes.number,
-  initial: PropTypes.number,
+  start: PropTypes.bool,
+  actual: PropTypes.string,
+  initial: PropTypes.string,
 };
 
 Progress.defaultProps = {
-  start: 0,
-  actual: 0,
-  initial: 0,
+  start: false,
+  actual: "",
+  initial: "",
 };
 
 export default Progress;

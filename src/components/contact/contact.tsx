@@ -9,14 +9,14 @@ const Contact = () => (
         <div className={style.text}>
           <p>
             <strong>
-              If you want to get in touch, it&apos;d be great to hear from you!
-              Will be a nice break from the spam that generally comes through...
+              If you want to get in touch, it&apos;d be great to hear from you! Will be a nice break
+              from the spam that generally comes through...
             </strong>
           </p>
           <p>
-            I&apos;m always interested to hear about potential projects and
-            opportunities. I won&apos;t always be available, but I&apos;ll be
-            sure to let you know as soon as possible.
+            I&apos;m always interested to hear about potential projects and opportunities. I
+            won&apos;t always be available, but I&apos;ll be sure to let you know as soon as
+            possible.
           </p>
         </div>
 
@@ -46,19 +46,12 @@ const Contact = () => (
               <title id="contact-linkedin">LinkedIn</title>
               <path d="M19.838,24V15.235c0-5.271-6.29-4.873-6.29,0V24H8.362V7.3h5.184V9.553c2.187-4.048,11.5-4.347,11.5,3.876V24ZM0,24V7.3H5.218V24ZM.021,2.609A2.588,2.588,0,1,1,2.609,5.218,2.6,2.6,0,0,1,.021,2.609Z" />
             </svg>
-            <a href="https://www.linkedin.com/in/andrewbarnes102/">
-              in/andrewbarnes102
-            </a>
+            <a href="https://www.linkedin.com/in/andrewbarnes102/">in/andrewbarnes102</a>
           </li>
         </ul>
       </div>
 
-      <form
-        className={style.form}
-        name="contact"
-        method="POST"
-        data-netlify="true"
-      >
+      <form className={style.form} name="contact" method="POST" data-netlify="true">
         <input type="hidden" name="form-name" value="contact" />
         <label htmlFor="name">Name</label>
         <input id="name" name="name" type="text" required />
@@ -67,7 +60,7 @@ const Contact = () => (
         <input id="email" name="email" type="email" required />
 
         <label htmlFor="message">Message</label>
-        <textarea rows="5" id="message" name="message" required />
+        <textarea rows={5} id="message" name="message" required />
 
         <button type="submit">Send message</button>
       </form>

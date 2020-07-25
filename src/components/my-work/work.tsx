@@ -33,9 +33,9 @@ Work.propTypes = {
   alternate: PropTypes.bool,
   title: PropTypes.string,
   type: PropTypes.string,
-  year: PropTypes.number,
+  year: PropTypes.string,
   skills: PropTypes.string,
-  image: PropTypes.string,
+  image: PropTypes.objectOf(PropTypes.object),
   children: PropTypes.node,
 };
 
@@ -43,9 +43,9 @@ Work.defaultProps = {
   alternate: false,
   title: "",
   type: "",
-  year: 0,
+  year: "",
   skills: "",
-  image: "",
+  image: null,
   children: null,
 };
 
