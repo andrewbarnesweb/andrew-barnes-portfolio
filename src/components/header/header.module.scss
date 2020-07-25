@@ -1,4 +1,4 @@
-@import '../function.scss';
+@import "../function.scss";
 
 .menu-container {
   background: var(--button);
@@ -8,7 +8,7 @@
   position: fixed;
   right: 0;
   top: 0;
-  transition: .2s ease-in-out;
+  transition: 0.2s ease-in-out;
   width: calculateRem(80);
   z-index: 3000;
 }
@@ -39,26 +39,25 @@
 }
 
 .menu-icon {
-  background: #FFF;
+  background: #fff;
   display: block;
   height: calculateRem(2);
   position: absolute;
   right: calculateRem(18);
   top: calculateRem(30);
   transform-origin: center;
-  transition: .5s ease-in-out;
+  transition: 0.5s ease-in-out;
   width: calculateRem(30);
-
 
   &::after,
   &::before {
-    transition: .5s ease-in-out;
+    transition: 0.5s ease-in-out;
     content: "";
     position: absolute;
     display: block;
     width: 100%;
     height: 100%;
-    background: #FFF;
+    background: #fff;
   }
 
   &::after {
@@ -85,7 +84,6 @@
   }
 }
 
-
 .nav {
   padding: 0;
   margin: 0;
@@ -93,14 +91,14 @@
   margin-top: calculateRem(80);
   opacity: 0;
   visibility: hidden;
-  transition: opacity .3s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
 
   li {
     text-align: center;
   }
 
   a {
-    color: #FFF;
+    color: #fff;
     text-decoration: none;
     padding: calculateRem(15) calculateRem(10);
     display: inline-block;
@@ -113,7 +111,7 @@
 
 .nav-active {
   composes: nav;
-  transition-delay: .2s;
+  transition-delay: 0.2s;
   opacity: 1;
   visibility: visible;
 }
@@ -141,7 +139,7 @@
     align-items: center;
     background: var(--bg);
     border-radius: 0;
-    box-shadow: 0px calculateRem(2) calculateRem(4) #6363630E;
+    box-shadow: 0px calculateRem(2) calculateRem(4) #6363630e;
     display: flex;
     height: calculateRem(80);
     justify-content: space-between;
@@ -183,7 +181,7 @@
         background-color: var(--focus);
         border-radius: calculateRem(3);
         outline: none;
-        color: #FFF;
+        color: #fff;
       }
 
       &:active {

@@ -48,11 +48,10 @@ body {
   --bar-background: #d8d8d8;
   --button: var(--primary);
   --focus: #0b74e4;
-  --focus-accent: #81BBF8;
+  --focus-accent: #81bbf8;
   min-height: 100vh;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
-
 
   &.dark {
     --bg: #202026;
@@ -115,7 +114,7 @@ select {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
-    transition-delay: 0.01ms !important;;
+    transition-delay: 0.01ms !important;
     scroll-behavior: auto !important;
   }
 }

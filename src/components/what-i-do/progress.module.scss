@@ -1,4 +1,4 @@
-@import '../function.scss';
+@import "../function.scss";
 
 .progress {
   background-color: var(--bar-background);
@@ -14,7 +14,7 @@
     height: 100%;
     width: 0;
     background-color: var(--primary);
-    transition: width .6s ease-out .1s;
-    transition-delay: .5s;
+    transition: width 0.6s ease-out 0.1s;
+    transition-delay: 0.5s;
   }
 }

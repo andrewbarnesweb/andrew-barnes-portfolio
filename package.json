@@ -14,6 +14,7 @@
     "gatsby-plugin-react-helmet": "^3.1.22",
     "gatsby-plugin-sass": "^2.1.29",
     "gatsby-plugin-sharp": "^2.4.5",
+    "gatsby-plugin-typescript": "^2.4.16",
     "gatsby-source-filesystem": "^2.1.48",
     "gatsby-transformer-sharp": "^2.3.16",
     "node-sass": "^4.13.1",
@@ -24,7 +25,28 @@
     "react-visibility-sensor": "^5.1.1"
   },
   "devDependencies": {
-    "prettier": "^1.19.1"
+    "@types/node": "^14.0.25",
+    "@types/react": "^16.9.43",
+    "@types/react-dom": "^16.9.8",
+    "@types/react-helmet": "^6.0.0",
+    "@typescript-eslint/eslint-plugin": "^3.7.0",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb": "^18.2.0",
+    "eslint-config-airbnb-typescript": "^9.0.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-jsx-a11y": "^6.3.1",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-react": "^7.20.3",
+    "eslint-plugin-react-hooks": "^4.0.8",
+    "husky": "^4.2.5",
+    "prettier": "^1.19.1",
+    "typescript": "^3.9.7"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run format && git add ."
+    }
   },
   "keywords": [
     "gatsby"
@@ -33,10 +55,12 @@
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
-    "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
+    "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx,scss,json,md}\" && eslint --fix --ext .ts --ext .tsx .",
     "start": "npm run develop",
     "serve": "gatsby serve",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing \""
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing \"",
+    "lint-eslint": "eslint --ext .ts --ext .tsx .",
+    "lint-prettier": "prettier --check \"src/**/*.{js,jsx,ts,tsx,scss,json,md}\""
   },
   "repository": {
     "type": "git",

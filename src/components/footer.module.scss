@@ -1,4 +1,4 @@
-@import 'function.scss';
+@import "function.scss";
 
 .footer {
   div {
@@ -38,7 +38,7 @@
       background-color: var(--focus);
       border-radius: calculateRem(3);
       outline: none;
-      color: #FFF;
+      color: #fff;
     }
 
     &:active {

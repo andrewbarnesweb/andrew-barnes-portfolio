@@ -1,4 +1,4 @@
-@import '../function.scss';
+@import "../function.scss";
 
 .toggle-container {
   display: flex;
@@ -30,7 +30,7 @@
     }
 
     &:checked + label {
-      background-color: rgba(#fff, .6);
+      background-color: rgba(#fff, 0.6);
     }
 
     &:checked + label:after {
@@ -51,7 +51,7 @@
 
     &:after {
       transition: all 200ms ease-in-out;
-      content: ' ';
+      content: " ";
       position: absolute;
       height: calculateRem(22);
       width: calculateRem(22);
@@ -60,7 +60,7 @@
       top: calculateRem(-4);
       left: calculateRem(-6);
       right: auto;
-      box-shadow: 0px calculateRem(3) calculateRem(6) #0000003C;
+      box-shadow: 0px calculateRem(3) calculateRem(6) #0000003c;
     }
   }
 }
@@ -78,12 +78,12 @@
   .toggle {
     input[type="checkbox"] {
       &:checked + label {
-        background-color: rgba(var(--primary-rgb), .6);
+        background-color: rgba(var(--primary-rgb), 0.6);
       }
     }
 
     label {
-      background-color: rgba(var(--primary-rgb), .6);
+      background-color: rgba(var(--primary-rgb), 0.6);
 
       &::after {
         background-color: var(--primary);

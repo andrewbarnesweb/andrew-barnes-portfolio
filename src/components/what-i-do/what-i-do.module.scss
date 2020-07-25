@@ -1,4 +1,4 @@
-@import '../function.scss';
+@import "../function.scss";
 
 .container {
   @include animate-setup(100);
@@ -80,7 +80,6 @@
     }
   }
 }
-
 
 @media only screen and (min-width: 992px) {
   .content {
