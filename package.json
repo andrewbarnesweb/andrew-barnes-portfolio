@@ -51,7 +51,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run format && git add ."
+      "pre-commit": "npm run test:e2e:ci && npm run format && git add ."
     }
   },
   "keywords": [
