@@ -12,7 +12,7 @@ function getAge(dateString) {
   }
   return age;
 }
-class About extends React.Component<{}, { age: number }> {
+class About extends React.Component<{ age: number }> {
   constructor(props) {
     super(props);
     this.state = {

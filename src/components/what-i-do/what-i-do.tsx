@@ -5,7 +5,7 @@ import Section from "../section/section";
 import SkillCard from "./skill-card";
 import Progress from "./progress";
 
-class WhatIDo extends React.Component<{}, { visible: boolean }> {
+class WhatIDo extends React.Component<{ visible: boolean }> {
   constructor(props) {
     super(props);
     this.onChange = this.onChange.bind(this);
