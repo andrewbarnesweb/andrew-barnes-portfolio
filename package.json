@@ -45,13 +45,22 @@
     "eslint-plugin-react": "^7.20.3",
     "eslint-plugin-react-hooks": "^4.0.8",
     "husky": "^4.2.5",
+    "lint-staged": "^10.2.11",
     "prettier": "^1.19.1",
     "start-server-and-test": "^1.11.2",
     "typescript": "^3.9.7"
   },
+  "lint-staged": {
+    "src/**/*.{ts,tsx}": [
+      "eslint . --fix"
+    ],
+    "src/**/*.{js,jsx,ts,tsx,scss,json,md}": [
+      "prettier --write"
+    ]
+  },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run test:e2e:ci && npm run format && git add ."
+      "pre-commit": "npm run test:e2e:ci && lint-staged"
     }
   },
   "keywords": [
