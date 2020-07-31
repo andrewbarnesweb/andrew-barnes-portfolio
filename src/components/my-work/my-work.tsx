@@ -46,10 +46,10 @@ const MyWork = () => (
             </p>
             <p>
               The site was designed in Sketch, using InVision to get sign off from the client. And
-              given some requirements about adding news stories, a
+              given some requirements about adding news stories, a{" "}
               <a href="https://getgrav.org/" title="GRAV CMS">
                 flat file CMS system
-              </a>
+              </a>{" "}
               was used to manage the content.
             </p>
             <p>

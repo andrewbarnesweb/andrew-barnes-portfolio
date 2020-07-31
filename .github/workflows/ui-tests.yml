@@ -1,0 +1,24 @@
+name: UI Tests
+
+on: [push]
+
+jobs:
+  vet:
+    name: Run all UI tests
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Use Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12
+
+      - name: Install
+        run: |
+          npm ci
+
+      - name: Cypress and Axe
+        run: |
+          npm run test:e2e:ci

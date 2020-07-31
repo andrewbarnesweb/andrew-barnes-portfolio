@@ -2,7 +2,7 @@ import React from "react";
 import style from "./header.module.scss";
 import Toggle from "./toggle";
 
-class Header extends React.Component<{}, { visible: boolean; condition: boolean }> {
+class Header extends React.Component<unknown, { visible: boolean; condition: boolean }> {
   constructor(props) {
     super(props);
     this.state = {
