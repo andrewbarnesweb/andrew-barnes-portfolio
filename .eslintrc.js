@@ -1,41 +1,34 @@
 module.exports = {
-  parser: "@typescript-eslint/parser", // Specifies the ESLint parser
-  extends: [
-    "eslint:recommended",
-    "plugin:react/recommended",
-    "plugin:@typescript-eslint/recommended",
-    "prettier/@typescript-eslint",
-    "plugin:prettier/recommended",
-  ],
-  settings: {
-    react: {
-      version: "detect",
-    },
-  },
-  env: {
-    browser: true,
-    node: true,
-    es6: true,
-  },
-  plugins: ["@typescript-eslint", "react"],
+  plugins: ["prettier", "@typescript-eslint"],
+  extends: ["airbnb-typescript", "react-app", "prettier", "prettier/react"],
+  parser: "@typescript-eslint/parser",
   parserOptions: {
-    ecmaFeatures: {
-      jsx: true,
-    },
-    ecmaVersion: 2018, // Allows for the parsing of modern ECMAScript features
-    sourceType: "module", // Allows for the use of imports
+    project: "./tsconfig.json",
   },
-  rules: {
-    "react/prop-types": "off", // Disable prop-types as we use TypeScript for type checking
-    "@typescript-eslint/explicit-function-return-type": "off",
-  },
-  overrides: [
-    // Override some TypeScript rules just for .js files
-    {
-      files: ["*.js"],
-      rules: {
-        "@typescript-eslint/no-var-requires": "off", //
+  settings: {
+    "import/resolver": {
+      typescript: {
+        alwaysTryTypes: true,
       },
     },
-  ],
+  },
+  rules: {
+    "prettier/prettier": "error",
+    // turn eslint quotes off, as dealt with in prettier settings
+    "@typescript-eslint/quotes": ["off"],
+    // stop all usage of any
+    "@typescript-eslint/no-explicit-any": [
+      "error",
+      {
+        ignoreRestArgs: false,
+      },
+    ],
+    // Allow htmlFor to be used without the control nested
+    "jsx-a11y/label-has-associated-control": [
+      "error",
+      {
+        assert: "either",
+      },
+    ],
+  },
 };
