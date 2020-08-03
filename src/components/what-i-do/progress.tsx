@@ -4,7 +4,7 @@ import style from "./progress.module.scss";
 
 const Progress = ({ start, actual, initial }) => (
   <div className={style.progress}>
-    <div style={{ width: start ? actual : initial }} />
+    <div data-testid="progress" style={{ width: start ? actual : initial }} />
   </div>
 );
 

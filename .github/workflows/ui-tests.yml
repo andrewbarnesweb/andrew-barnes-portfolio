@@ -1,4 +1,4 @@
-name: UI Tests
+name: Cypress and Axe
 
 on: [push]
 
