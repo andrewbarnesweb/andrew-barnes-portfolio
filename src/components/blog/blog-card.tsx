@@ -27,7 +27,8 @@ BlogCard.propTypes = {
   link: PropTypes.string,
   title: PropTypes.string,
   date: PropTypes.instanceOf(Date),
-  image: PropTypes.objectOf(PropTypes.object),
+  // eslint-disable-next-line react/forbid-prop-types
+  image: PropTypes.object,
 };
 
 BlogCard.defaultProps = {
