@@ -12,10 +12,11 @@ html {
   box-sizing: border-box;
 }
 
-/* Remove default padding */
+/* Remove default padding and list styles */
 ul[class],
 ol[class] {
   padding: 0;
+  list-style: none;
 }
 
 /* Remove default margin */
@@ -66,9 +67,7 @@ body {
     --focus: #0b74e4;
     --focus-accent: #fff;
   }
-}
 
-body {
   background-color: var(--bg);
   transition: background 0.2s ease-out;
 }
@@ -76,12 +75,6 @@ body {
 ::selection {
   background-color: var(--primary);
   color: #fff;
-}
-
-/* Remove list styles on ul, ol elements with a class attribute */
-ul[class],
-ol[class] {
-  list-style: none;
 }
 
 /* A elements that don't have a class get default styles */
