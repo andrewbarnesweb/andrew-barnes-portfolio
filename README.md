@@ -6,7 +6,7 @@
     </a>
   </p>
 
-# Portfolio website for Andrew Barnes
+# Developer and Designer Portfolio
 
 ![ESLint and Prettier](https://github.com/andrewbarnesweb/andrew-barnes-portfolio/workflows/ESLint%20and%20Prettier/badge.svg)
 ![Unit Tests](https://github.com/andrewbarnesweb/andrew-barnes-portfolio/workflows/Unit%20tests/badge.svg)
@@ -14,7 +14,7 @@
 
 </div>
 
-My slice of the web. Using Gatsby.
+My slice of the web. Using Gatsby and deployed with Netlify.
 
 ## Install
 
