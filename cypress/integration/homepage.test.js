@@ -31,7 +31,7 @@ describe("Accessibility tests", () => {
 
   it("Has no detectable accessibility violations on load in dark mode", () => {
     cy.checkA11y(null, null, terminalLog);
-    cy.percySnapshot();
+    cy.percySnapshot("Homepage test - Light mode");
   });
 
   it("Has no detectable accessibility violations on load in light mode", () => {
@@ -39,7 +39,7 @@ describe("Accessibility tests", () => {
       .click({ force: true })
       .wait(100);
     cy.checkA11y(null, null, terminalLog);
-    cy.percySnapshot();
+    cy.percySnapshot("Homepage test - Dark mode");
   });
 });
 
@@ -62,12 +62,11 @@ describe("Functionality tests", () => {
       .click()
       .get("header div")
       .should("have.css", "position", "fixed");
-    cy.percySnapshot();
+    cy.percySnapshot("Mobile nav expansion");
     cy.get("header div button")
       .first()
       .click()
       .get("header div")
       .should("have.css", "width", "80px");
-    cy.percySnapshot();
   });
 });
