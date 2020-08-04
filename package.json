@@ -25,6 +25,7 @@
     "react-visibility-sensor": "^5.1.1"
   },
   "devDependencies": {
+    "@percy/cypress": "^2.3.1",
     "@testing-library/cypress": "^6.0.0",
     "@testing-library/jest-dom": "^5.11.2",
     "@testing-library/react": "^10.4.7",
@@ -73,7 +74,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run test:e2e:ci && lint-staged && npm run test"
+      "pre-commit": "npm run test:e2e:ci:develop && lint-staged && npm run test"
     }
   },
   "keywords": [
@@ -90,9 +91,10 @@
     "lint-eslint": "eslint --ext .ts --ext .tsx .",
     "lint-prettier": "prettier --check \"src/**/*.{js,jsx,ts,tsx,scss,json,md}\"",
     "cy:open": "cypress open",
-    "cy:run": "cypress run",
+    "cy:run": "percy exec -- cypress run",
     "test:e2e": "start-server-and-test develop http://localhost:8000 cy:open",
-    "test:e2e:ci": "start-server-and-test develop http://localhost:8000 cy:run"
+    "test:e2e:ci:develop": "start-server-and-test develop http://localhost:8000 cy:run",
+    "test:e2e:ci:serve": "start-server-and-test serve http://localhost:9000 'CYPRESS_baseUrl=http://localhost:9000 npm run cy:run'"
   },
   "repository": {
     "type": "git",
