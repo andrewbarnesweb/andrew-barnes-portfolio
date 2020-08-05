@@ -1,23 +1,20 @@
 import React from "react";
-import PropTypes from "prop-types";
 import style from "./progress.module.scss";
 
-const Progress = ({ start, actual, initial }) => (
-  <div className={style.progress}>
-    <div data-testid="progress" style={{ width: start ? actual : initial }} />
-  </div>
-);
+export interface IProgressProps {
+  start: boolean;
+  actual: string;
+  initial: string;
+}
 
-Progress.propTypes = {
-  start: PropTypes.bool,
-  actual: PropTypes.string,
-  initial: PropTypes.string,
-};
+const Progress: React.FC<IProgressProps> = (props: IProgressProps): JSX.Element => {
+  const { start, actual, initial } = props;
 
-Progress.defaultProps = {
-  start: false,
-  actual: "",
-  initial: "",
+  return (
+    <div className={style.progress}>
+      <div data-testid="progress" style={{ width: start ? actual : initial }} />
+    </div>
+  );
 };
 
 export default Progress;
