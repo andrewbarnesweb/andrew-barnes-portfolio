@@ -46,7 +46,7 @@
     padding: calculateRem(12) calculateRem(24);
     display: inline-block;
     margin-top: calculateRem(20);
-    transition: all .3s;
+    transition: all 0.3s;
 
     &:hover {
       border-radius: calculateRem(24);
@@ -62,7 +62,7 @@
 
 @mixin link-style($bottom) {
   &::after {
-    content: '';
+    content: "";
     position: absolute;
     bottom: calculateRem($bottom);
     left: 0;
@@ -94,5 +94,11 @@
 }
 
 @mixin triangle-background {
-  background: linear-gradient(to bottom right, var(--accent-one) 0%, var(--accent-one) 50%, var(--accent-two) 50%, var(--accent-two) 100%);
+  background: linear-gradient(
+    to bottom right,
+    var(--accent-one) 0%,
+    var(--accent-one) 50%,
+    var(--accent-two) 50%,
+    var(--accent-two) 100%
+  );
 }

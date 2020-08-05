@@ -1,4 +1,4 @@
-@import '../function.scss';
+@import "../function.scss";
 
 .text {
   @include paragraphs;
@@ -14,7 +14,7 @@
       background-color: var(--focus);
       border-radius: calculateRem(3);
       outline: none;
-      color: #FFF;
+      color: #fff;
     }
 
     &:active {
