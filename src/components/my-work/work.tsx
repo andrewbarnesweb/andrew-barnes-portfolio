@@ -1,24 +1,13 @@
 import React from "react";
-import Img from "gatsby-image";
+import Img, { FluidObject } from "gatsby-image";
 import style from "./work.module.scss";
 
-interface FluidObject {
-  aspectRatio: number;
-  src: string;
-  srcSet: string;
-  sizes: string;
-  base64?: string;
-  tracedSVG?: string;
-  srcWebp?: string;
-  srcSetWebp?: string;
-}
-
 export interface IWorkProps {
-  alternate: boolean;
+  alternate?: boolean;
   title: string;
   type: string;
   year: string;
-  skills: string;
+  skills?: string;
   image: FluidObject;
   children: React.ReactNode;
 }
