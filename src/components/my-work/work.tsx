@@ -1,6 +1,5 @@
 import React from "react";
 import Img from "gatsby-image";
-import PropTypes from "prop-types";
 import style from "./work.module.scss";
 
 interface FluidObject {

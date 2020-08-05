@@ -1,41 +1,36 @@
 import React from "react";
-import Img from "gatsby-image";
-import PropTypes from "prop-types";
+import Img, { FluidObject } from "gatsby-image";
 import style from "./blog-card.module.scss";
 
-const BlogCard = ({ link, title, date, image }) => (
-  <a className={style.container} href={link} title={title}>
-    <div className={style.post}>
-      <h3 className={style.link}>{title}</h3>
-      <span className={style.separator} />
-      <div className={style.time}>
-        <strong>Posted: </strong>
-        <time dateTime={date}>
-          {date.toLocaleDateString("en-GB", {
-            year: "numeric",
-            month: "short",
-            day: "2-digit",
-          })}
-        </time>
+export interface IBlogCardProps {
+  link: string;
+  title: string;
+  date: Date;
+  image: FluidObject;
+}
+
+const BlogCard: React.FC<IBlogCardProps> = (props: IBlogCardProps): JSX.Element => {
+  const { link, title, date, image } = props;
+
+  return (
+    <a className={style.container} href={link} title={title}>
+      <div className={style.post}>
+        <h3 className={style.link}>{title}</h3>
+        <span className={style.separator} />
+        <div className={style.time}>
+          <strong>Posted: </strong>
+          <time dateTime={date.toLocaleString()}>
+            {date.toLocaleDateString("en-GB", {
+              year: "numeric",
+              month: "short",
+              day: "2-digit",
+            })}
+          </time>
+        </div>
+        <Img fluid={image} alt="" />
       </div>
-      <Img fluid={image} alt="" />
-    </div>
-  </a>
-);
-
-BlogCard.propTypes = {
-  link: PropTypes.string,
-  title: PropTypes.string,
-  date: PropTypes.instanceOf(Date),
-  // eslint-disable-next-line react/forbid-prop-types
-  image: PropTypes.object,
-};
-
-BlogCard.defaultProps = {
-  link: "",
-  title: "",
-  date: "",
-  image: null,
+    </a>
+  );
 };
 
 export default BlogCard;
