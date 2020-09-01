@@ -5,11 +5,12 @@ import style from "./section.module.scss";
 export interface ISectionProps {
   background?: boolean;
   children: React.ReactNode;
+  anchor: string;
   title: string;
 }
 
 const Section: React.FC<ISectionProps> = (props: ISectionProps): JSX.Element => {
-  const { background, children, title } = props;
+  const { background, children, anchor, title } = props;
   const [visible, setVisible] = useState(false);
 
   const onChange = isVisible => {
@@ -27,14 +28,16 @@ const Section: React.FC<ISectionProps> = (props: ISectionProps): JSX.Element => 
   }
 
   return (
-    <VisibilitySensor partialVisibility onChange={onChange}>
-      <div className={visible ? classes : style.container}>
-        <div className={style.content}>
-          <h2 className={style.title}>{title}</h2>
-          {children}
+    <section id={anchor}>
+      <VisibilitySensor partialVisibility onChange={onChange}>
+        <div className={visible ? classes : style.container}>
+          <div className={style.content}>
+            <h2 className={style.title}>{title}</h2>
+            {children}
+          </div>
         </div>
-      </div>
-    </VisibilitySensor>
+      </VisibilitySensor>
+    </section>
   );
 };
 

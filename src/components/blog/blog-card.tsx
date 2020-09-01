@@ -19,7 +19,7 @@ const BlogCard: React.FC<IBlogCardProps> = (props: IBlogCardProps): JSX.Element 
         <span className={style.separator} />
         <div className={style.time}>
           <strong>Posted: </strong>
-          <time dateTime={date.toLocaleString()}>
+          <time dateTime={date.toISOString().split("T")[0]}>
             {date.toLocaleDateString("en-GB", {
               year: "numeric",
               month: "short",

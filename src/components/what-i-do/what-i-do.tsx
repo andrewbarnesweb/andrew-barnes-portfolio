@@ -15,7 +15,7 @@ const WhatIDo = () => {
   };
 
   return (
-    <Section title="What I do">
+    <Section anchor="what-i-do" title="What I do">
       <div className={style.skills}>
         <div className={style.skillsContainer}>
           <SkillCard icon="code" skill="Web development">

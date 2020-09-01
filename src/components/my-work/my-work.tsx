@@ -32,7 +32,7 @@ const MyWork = () => (
     `}
     render={data => (
       <>
-        <Section title="My work">
+        <Section anchor="my-work" title="My work">
           <Work
             title="Russell Financial Solutions"
             type="Web design and development"
