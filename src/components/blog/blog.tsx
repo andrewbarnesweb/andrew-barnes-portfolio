@@ -40,7 +40,7 @@ const Blog = () => (
     `}
     render={data => (
       <>
-        <Section title="Blog" background>
+        <Section anchor="blog" title="Blog" background>
           <div className={style.posts}>
             <BlogCard
               title="Website update (Part 2): The design"

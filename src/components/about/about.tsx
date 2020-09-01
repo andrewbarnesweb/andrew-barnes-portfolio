@@ -14,7 +14,7 @@ function getAge(dateString) {
 }
 
 const About = (): JSX.Element => (
-  <Section title="About me" background>
+  <Section anchor="about-me" title="About me" background>
     <div className={style.content}>
       <div className={style.copy}>
         <div className={style.text}>

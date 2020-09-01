@@ -3,7 +3,7 @@ import style from "./contact.module.scss";
 import Section from "../section/section";
 
 const Contact = () => (
-  <Section title="Contact" background>
+  <Section anchor="contact" title="Contact" background>
     <div className={style.content}>
       <div className={style.copy}>
         <div className={style.text}>
