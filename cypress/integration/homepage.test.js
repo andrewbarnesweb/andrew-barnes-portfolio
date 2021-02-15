@@ -37,7 +37,7 @@ describe("Accessibility tests", () => {
   it("Has no detectable accessibility violations on load in light mode", () => {
     cy.get("#theme-checkbox")
       .click({ force: true })
-      .wait(100);
+      .wait(1000);
     cy.checkA11y(null, null, terminalLog);
     cy.percySnapshot("Homepage test - Dark mode");
   });

@@ -38,7 +38,7 @@ const Blog = () => (
         }
       }
     `}
-    render={data => (
+    render={(data) => (
       <>
         <Section anchor="blog" title="Blog" background>
           <div className={style.posts}>
