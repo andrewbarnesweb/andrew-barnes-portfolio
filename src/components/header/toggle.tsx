@@ -23,7 +23,7 @@ const Toggle = (): JSX.Element => (
             <input
               type="checkbox"
               id="theme-checkbox"
-              onChange={e => toggleTheme(e.target.checked ? "dark" : "light")}
+              onChange={(e) => toggleTheme(e.target.checked ? "dark" : "light")}
               checked={theme === "dark"}
               aria-label="Activate dark mode"
             />{" "}

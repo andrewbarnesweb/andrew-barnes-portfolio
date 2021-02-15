@@ -13,7 +13,7 @@ const Section: React.FC<ISectionProps> = (props: ISectionProps): JSX.Element => 
   const { background, children, anchor, title } = props;
   const [visible, setVisible] = useState(false);
 
-  const onChange = isVisible => {
+  const onChange = (isVisible) => {
     if (isVisible) {
       setVisible(true);
     }

@@ -8,7 +8,7 @@ import Progress from "./progress";
 const WhatIDo = () => {
   const [visible, setVisible] = useState(false);
 
-  const onChange = isVisible => {
+  const onChange = (isVisible) => {
     if (isVisible) {
       setVisible(true);
     }
