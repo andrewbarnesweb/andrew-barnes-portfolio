@@ -1,6 +1,6 @@
 import React from "react";
 import Img, { FluidObject } from "gatsby-image";
-import style from "./blog-card.module.scss";
+import * as style from "./blog-card.module.scss";
 
 export interface IBlogCardProps {
   link: string;

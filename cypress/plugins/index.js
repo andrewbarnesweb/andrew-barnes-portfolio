@@ -12,8 +12,6 @@
 // This function is called when a project is opened or re-opened (e.g. due to
 // the project's config changing)
 
-let percyHealthCheck = require("@percy/cypress/task");
-
 /**
  * @type {Cypress.PluginConfig}
  */
@@ -32,8 +30,6 @@ module.exports = (on, config) => {
       return null;
     },
   });
-
-  on("task", percyHealthCheck);
 
   on("before:browser:launch", (browser = {}, args) => {
     console.log("browser", browser);

@@ -1,5 +1,5 @@
 import React from "react";
-import style from "./progress.module.scss";
+import * as style from "./progress.module.scss";
 
 export interface IProgressProps {
   start: boolean;

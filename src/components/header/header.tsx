@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import style from "./header.module.scss";
+import * as style from "./header.module.scss";
 import Toggle from "./toggle";
 
 const Header = () => {

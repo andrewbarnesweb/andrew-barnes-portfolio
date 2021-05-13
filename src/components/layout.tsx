@@ -1,6 +1,6 @@
 import React from "react";
 import "./layout.scss";
-import style from "./footer.module.scss";
+import * as style from "./footer.module.scss";
 import Header from "./header/header";
 
 export interface ILayoutProps {
