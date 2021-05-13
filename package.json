@@ -91,7 +91,7 @@
     "lint-eslint": "eslint --ext .ts --ext .tsx .",
     "lint-prettier": "prettier --check \"src/**/*.{js,jsx,ts,tsx,scss,json,md}\"",
     "cy:open": "cypress open",
-    "cy:run": "exec -- cypress run",
+    "cy:run": "cypress run",
     "test:e2e": "start-server-and-test develop http://localhost:8000 cy:open",
     "test:e2e:ci:develop": "start-server-and-test develop http://localhost:8000 cy:run",
     "test:e2e:ci:serve": "start-server-and-test serve http://localhost:9000 'CYPRESS_baseUrl=http://localhost:9000 npm run cy:run'"
