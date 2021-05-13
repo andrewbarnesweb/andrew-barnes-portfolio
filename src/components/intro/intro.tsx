@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import style from "./intro.module.scss";
+import * as style from "./intro.module.scss";
 import avatar from "../../images/avatar.jpg";
 
 const Intro = () => {
@@ -24,7 +24,7 @@ const Intro = () => {
         </div>
         <ul className={style.list}>
           <li>
-            <a href="https://medium.com/@andrew_barnes">
+            <a href="https://andrew-barnes.medium.com/">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 aria-labelledby="medium"

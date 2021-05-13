@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import VisibilitySensor from "react-visibility-sensor";
-import style from "./what-i-do.module.scss";
+import * as style from "./what-i-do.module.scss";
 import Section from "../section/section";
 import SkillCard from "./skill-card";
 import Progress from "./progress";

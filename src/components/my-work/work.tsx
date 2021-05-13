@@ -1,6 +1,6 @@
 import React from "react";
 import Img, { FluidObject } from "gatsby-image";
-import style from "./work.module.scss";
+import * as style from "./work.module.scss";
 
 export interface IWorkProps {
   alternate?: boolean;

@@ -1,5 +1,5 @@
 import React from "react";
-import style from "./about.module.scss";
+import * as style from "./about.module.scss";
 import Section from "../section/section";
 
 function getAge(dateString) {
