@@ -3,4 +3,5 @@ cypress/
 
 node_modules/
 public/
+.eslintrc.js
 

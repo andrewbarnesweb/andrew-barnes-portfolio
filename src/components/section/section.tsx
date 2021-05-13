@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import VisibilitySensor from "react-visibility-sensor";
-import style from "./section.module.scss";
+import * as style from "./section.module.scss";
 
 export interface ISectionProps {
   background?: boolean;

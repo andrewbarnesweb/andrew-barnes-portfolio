@@ -1,6 +1,6 @@
 import React from "react";
 import { StaticQuery, graphql } from "gatsby";
-import style from "./blog.module.scss";
+import * as style from "./blog.module.scss";
 import BlogCard from "./blog-card";
 import Section from "../section/section";
 

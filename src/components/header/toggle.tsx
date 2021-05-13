@@ -1,6 +1,6 @@
 import React from "react";
 import { ThemeToggler } from "gatsby-plugin-dark-mode";
-import style from "./toggle.module.scss";
+import * as style from "./toggle.module.scss";
 
 const Toggle = (): JSX.Element => (
   <div>

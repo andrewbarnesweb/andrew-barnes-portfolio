@@ -1,6 +1,6 @@
 import React from "react";
 
-import style from "./404.module.scss";
+import * as style from "./404.module.scss";
 import SEO from "../components/seo";
 
 const NotFoundPage = () => (

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import style from "./intro.module.scss";
+import * as style from "./intro.module.scss";
 import avatar from "../../images/avatar.jpg";
 
 const Intro = () => {

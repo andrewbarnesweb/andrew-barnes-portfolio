@@ -1,5 +1,5 @@
 import React from "react";
-import style from "./skill-card.module.scss";
+import * as style from "./skill-card.module.scss";
 
 function getIcon(icon) {
   let svg;

@@ -1,5 +1,5 @@
 import React from "react";
-import style from "./contact.module.scss";
+import * as style from "./contact.module.scss";
 import Section from "../section/section";
 
 const Contact = () => (
