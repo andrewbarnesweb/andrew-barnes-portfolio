@@ -8,30 +8,30 @@ const Blog = () => (
   <StaticQuery
     query={graphql`
       query {
-        redesign: file(relativePath: { eq: "blog/redesign.png" }) {
+        bemGrandchildren: file(relativePath: { eq: "blog/bem-grandchildren.jpg" }) {
           childImageSharp {
-            fluid(maxWidth: 500, quality: 80) {
+            fluid(maxWidth: 500, maxHeight: 150, quality: 80) {
               ...GatsbyImageSharpFluid
             }
           }
         }
         bemSass: file(relativePath: { eq: "blog/bem-and-sass.png" }) {
           childImageSharp {
-            fluid(maxWidth: 500, quality: 80) {
+            fluid(maxWidth: 500, maxHeight: 150, quality: 80) {
               ...GatsbyImageSharpFluid
             }
           }
         }
         focusIndicators: file(relativePath: { eq: "blog/focus-indicators.jpg" }) {
           childImageSharp {
-            fluid(maxWidth: 500, quality: 80) {
+            fluid(maxWidth: 500, maxHeight: 150, quality: 80) {
               ...GatsbyImageSharpFluid
             }
           }
         }
-        variableNames: file(relativePath: { eq: "blog/code.jpg" }) {
+        wcagAccessibility: file(relativePath: { eq: "blog/wcag-accessibility.jpg" }) {
           childImageSharp {
-            fluid(maxWidth: 500, quality: 80) {
+            fluid(maxWidth: 500, maxHeight: 150, quality: 80) {
               ...GatsbyImageSharpFluid
             }
           }
@@ -43,10 +43,16 @@ const Blog = () => (
         <Section anchor="blog" title="Blog" background>
           <div className={style.posts}>
             <BlogCard
-              title="Website update (Part 2): The design"
-              date={new Date("2020-02-21")}
-              link="https://medium.com/@andrew_barnes/website-update-part-2-the-design-d85b18c66470?source=friends_link&sk=661dbbbaab28cda70ae8d781b5d6ca28"
-              image={data.redesign.childImageSharp.fluid}
+              title="BEM CSS Tip: Dealing with grandchild elements"
+              date={new Date("2021-05-13")}
+              link="https://andrew-barnes.medium.com/bem-css-tip-dealing-with-grandchild-elements-d7378b51e722"
+              image={data.bemGrandchildren.childImageSharp.fluid}
+            />
+            <BlogCard
+              title="WCAG: Accessible colour and contrast ratios"
+              date={new Date("2021-03-30")}
+              link="https://bootcamp.uxdesign.cc/wcag-accessible-colour-and-contrast-ratios-5e94ea3f81f4"
+              image={data.wcagAccessibility.childImageSharp.fluid}
             />
             <BlogCard
               title="Accessible custom focus indicators"
@@ -60,15 +66,9 @@ const Blog = () => (
               link="https://medium.com/@andrew_barnes/bem-and-sass-a-perfect-match-5e48d9bc3894?source=friends_link&sk=45b6d470cdfff5d4635c03201fc5038c"
               image={data.bemSass.childImageSharp.fluid}
             />
-            <BlogCard
-              title="Colour variable names that scale"
-              date={new Date("2019-06-02")}
-              link="https://medium.com/swlh/colour-variable-names-that-scale-28663ae04052?source=friends_link&sk=b3627dc527e26c499778b7d186651301"
-              image={data.variableNames.childImageSharp.fluid}
-            />
           </div>
           <div>
-            <a className={style.link} href="https://medium.com/@andrew_barnes" title="Medium Posts">
+            <a className={style.link} href="https://andrew-barnes.medium.com/" title="Medium Posts">
               See all posts
             </a>
           </div>
