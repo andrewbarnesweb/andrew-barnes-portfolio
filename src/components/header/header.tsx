@@ -78,8 +78,8 @@ const Header = () => {
               </a>
             </li>
             <li>
-              <a onClick={handleClick} href="#blog">
-                Blog
+              <a onClick={handleClick} href="#latest-posts">
+                Latest posts
               </a>
             </li>
             <li>

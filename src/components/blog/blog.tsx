@@ -40,7 +40,7 @@ const Blog = () => (
     `}
     render={(data) => (
       <>
-        <Section anchor="blog" title="Blog" background>
+        <Section anchor="latest-posts" title="Latest Posts" background>
           <div className={style.posts}>
             <BlogCard
               title="BEM CSS Tip: Dealing with grandchild elements"
@@ -68,7 +68,7 @@ const Blog = () => (
             />
           </div>
           <div>
-            <a className={style.link} href="https://andrew-barnes.medium.com/" title="Medium Posts">
+            <a className={style.link} href="/blog" title="All blog posts">
               See all posts
             </a>
           </div>

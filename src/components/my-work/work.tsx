@@ -20,7 +20,7 @@ const Work: React.FC<IWorkProps> = (props: IWorkProps): JSX.Element => {
       <div className={alternate ? style.detailsAlternate : style.details}>
         <h3>{title}</h3>
         <h4>{type}</h4>
-        <time className={style.time} dateTime={year}>
+        <time dateTime={year}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             aria-hidden="true"
