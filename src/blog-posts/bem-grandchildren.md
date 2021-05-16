@@ -2,6 +2,7 @@
 slug: "/blog/2021-05/bem-css-grandchild-elements"
 date: "2021-05-13"
 title: "BEM CSS Tip: Dealing with grandchild elements"
+subtitle: "How to name selectors in elements that are 2+ levels deep in your BEM block"
 featuredImage: "../images/blog/bem-grandchildren.jpg"
 ---
 
