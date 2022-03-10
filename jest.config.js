@@ -21,5 +21,5 @@ module.exports = {
       statements: 100,
     },
   },
-  testEnvironment: "jsdom"
+  testEnvironment: "jsdom",
 };
